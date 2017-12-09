@@ -6,7 +6,7 @@
 
 
 int main(int argc, char *argv[]) {
-    /*Note a = Note(440, 1000);
+    Note a = Note(440, 1000);
     Note b = Note(493.88, 500);
     Note c = Note(523.25, 500);
     Note d = Note(587.33, 500);
@@ -28,7 +28,7 @@ int main(int argc, char *argv[]) {
     e.play();
     d.play();
     d.play();
-    c.play();*/
+    c.play();
 
 
 
