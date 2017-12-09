@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Keyboard.cpp
+Keyboard.hpp
+C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Keyboard.hpp
+
+C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Keyboard.hpp
+map
+-
+Note.hpp
+C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Note.hpp
+
+C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Note.cpp
+Note.hpp
+C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Note.hpp
+
+C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Note.hpp
+windows.h
+-
+
+C:/Users/Pc/Dropbox/IMAC2/C++/piano/main.cpp
+iostream
+-
+windows.h
+-
+conio.h
+-
+include/Note.hpp
+C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Note.hpp
+include/Keyboard.hpp
+C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Keyboard.hpp
+
