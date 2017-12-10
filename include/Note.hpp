@@ -13,21 +13,21 @@ protected:
 
 public:
     //constructor
-    Note(int m_frequency, int m_duration) : m_frequency(m_frequency), m_duration(m_duration) {}
+    Note(double m_frequency, int m_duration) : m_frequency(m_frequency), m_duration(m_duration) {}
 
     // getters
-    int getFreq() const;
+    double getFreq() const;
     int getDuration() const;
 
     // setters
-    void setFreq(unsigned int freq);
+    void setFreq(double freq);
     void setDuration(unsigned int duration);
 
     // play
     void play() const;
 
     //transpose
-    void transpose(int semiTone);
+    void transpose(int semitone);
 };
 
 

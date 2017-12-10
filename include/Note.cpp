@@ -8,7 +8,7 @@
 
 
 // getters
-int Note::getFreq() const {
+double Note::getFreq() const {
     return this->m_frequency;
 }
 int Note::getDuration() const {
@@ -16,7 +16,7 @@ int Note::getDuration() const {
 }
 
 // setters
-void Note::setFreq(unsigned int freq) {
+void Note::setFreq(double freq) {
     this->m_frequency = freq;
 }
 void Note::setDuration(unsigned int duration) {
@@ -27,6 +27,22 @@ void Note::play() const {
     Beep(this->m_frequency, this->m_duration);
 }
 
-void Note::transpose(int semiTone) {
-    this->m_frequency *= 1/12*semiTone;
+void Note::transpose(int semitone) {
+    if(semitone == 12) {
+        setFreq(this->m_frequency*2);
+    }
+    else if(semitone < 0)
+    {
+        for (int i = 0; i < abs(semitone); i++)
+        {
+            setFreq(this->m_frequency /= 1.059475);
+        }
+    }
+    else
+    {
+        for(int i = 0; i < semitone; i++)
+        {
+            setFreq(this->m_frequency *= 1.059475); // 1.059 is * coefficient btw 2 semitones
+        }
+    }
 }

@@ -1,5 +1,4 @@
 #include <iostream>
-#include <windows.h>
 #include <conio.h>
 #include "include/Note.hpp"
 #include "include/Keyboard.hpp"
@@ -16,7 +15,7 @@ int main(int argc, char *argv[]) {
     Note a2 = Note(880, 500);
     Note silence = Note(0, 500);
 
-    c.play();
+    /*c.play();
     c.play();
     c.play();
     d.play();
@@ -28,7 +27,23 @@ int main(int argc, char *argv[]) {
     e.play();
     d.play();
     d.play();
+    c.play();*/
+
     c.play();
+    c.transpose(5);
+    c.play();
+
+    /*do {
+        switch (getch()) {
+            case 'q':
+                c.play();
+                break;
+            case 's':
+                d.play();
+                break;
+        }
+    }
+    while(getch() != 0);*/
 
     return 0;
 }
