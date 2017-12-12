@@ -8,12 +8,14 @@
 
 class Note {
 protected:
-    int m_frequency;
+    double m_frequency;
     int m_duration; // ms
 
 public:
     //constructor
-    Note(double m_frequency, int m_duration) : m_frequency(m_frequency), m_duration(m_duration) {}
+    Note(double m_frequency, int m_duration) : m_frequency(m_frequency), m_duration(m_duration) {
+        m_duration = 500;
+    }
 
     // getters
     double getFreq() const;
@@ -25,9 +27,6 @@ public:
 
     // play
     void play() const;
-
-    //transpose
-    void transpose(int semitone);
 };
 
 

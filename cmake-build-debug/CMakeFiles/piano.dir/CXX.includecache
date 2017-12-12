@@ -6,12 +6,20 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Interface.cpp
+Interface.hpp
+C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Interface.hpp
+
+C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Interface.hpp
+
 C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Keyboard.cpp
 Keyboard.hpp
 C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Keyboard.hpp
 
 C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Keyboard.hpp
 map
+-
+vector
 -
 Note.hpp
 C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Note.hpp
@@ -26,8 +34,6 @@ windows.h
 
 C:/Users/Pc/Dropbox/IMAC2/C++/piano/main.cpp
 iostream
--
-windows.h
 -
 conio.h
 -
