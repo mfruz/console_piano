@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Interface.cpp" "C:/Users/Pc/Dropbox/IMAC2/C++/piano/cmake-build-debug/CMakeFiles/piano.dir/include/Interface.cpp.obj"
   "C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Keyboard.cpp" "C:/Users/Pc/Dropbox/IMAC2/C++/piano/cmake-build-debug/CMakeFiles/piano.dir/include/Keyboard.cpp.obj"
   "C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Note.cpp" "C:/Users/Pc/Dropbox/IMAC2/C++/piano/cmake-build-debug/CMakeFiles/piano.dir/include/Note.cpp.obj"
+  "C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Piano.cpp" "C:/Users/Pc/Dropbox/IMAC2/C++/piano/cmake-build-debug/CMakeFiles/piano.dir/include/Piano.cpp.obj"
   "C:/Users/Pc/Dropbox/IMAC2/C++/piano/main.cpp" "C:/Users/Pc/Dropbox/IMAC2/C++/piano/cmake-build-debug/CMakeFiles/piano.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

@@ -32,18 +32,6 @@ protected:
             493.883, // B4
             523.251  // C5
     };
-            /*double cAbs = 261.63;
-            double cSharp = 277.18;
-            double dAbs = 293.66;
-            double dSharp = 311.13;
-            double eAbs = 329.63;
-            double fAbs = 349.23;
-            double fSharp = 369.99;
-            double gAbs = 392;
-            double gSharp = 415.30;
-            double aAbs = 440;
-            double aSharp = 466.16;
-            double bAbs = 493.88;*/
 
 
 public:

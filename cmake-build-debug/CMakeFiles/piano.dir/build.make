@@ -128,28 +128,28 @@ CMakeFiles/piano.dir/include/Note.cpp.obj.provides: CMakeFiles/piano.dir/include
 CMakeFiles/piano.dir/include/Note.cpp.obj.provides.build: CMakeFiles/piano.dir/include/Note.cpp.obj
 
 
-CMakeFiles/piano.dir/include/Interface.cpp.obj: CMakeFiles/piano.dir/flags.make
-CMakeFiles/piano.dir/include/Interface.cpp.obj: ../include/Interface.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Pc\Dropbox\IMAC2\C++\piano\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/piano.dir/include/Interface.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\piano.dir\include\Interface.cpp.obj -c C:\Users\Pc\Dropbox\IMAC2\C++\piano\include\Interface.cpp
+CMakeFiles/piano.dir/include/Piano.cpp.obj: CMakeFiles/piano.dir/flags.make
+CMakeFiles/piano.dir/include/Piano.cpp.obj: ../include/Piano.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Pc\Dropbox\IMAC2\C++\piano\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/piano.dir/include/Piano.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\piano.dir\include\Piano.cpp.obj -c C:\Users\Pc\Dropbox\IMAC2\C++\piano\include\Piano.cpp
 
-CMakeFiles/piano.dir/include/Interface.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/piano.dir/include/Interface.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Pc\Dropbox\IMAC2\C++\piano\include\Interface.cpp > CMakeFiles\piano.dir\include\Interface.cpp.i
+CMakeFiles/piano.dir/include/Piano.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/piano.dir/include/Piano.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Pc\Dropbox\IMAC2\C++\piano\include\Piano.cpp > CMakeFiles\piano.dir\include\Piano.cpp.i
 
-CMakeFiles/piano.dir/include/Interface.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/piano.dir/include/Interface.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Pc\Dropbox\IMAC2\C++\piano\include\Interface.cpp -o CMakeFiles\piano.dir\include\Interface.cpp.s
+CMakeFiles/piano.dir/include/Piano.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/piano.dir/include/Piano.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Pc\Dropbox\IMAC2\C++\piano\include\Piano.cpp -o CMakeFiles\piano.dir\include\Piano.cpp.s
 
-CMakeFiles/piano.dir/include/Interface.cpp.obj.requires:
+CMakeFiles/piano.dir/include/Piano.cpp.obj.requires:
 
-.PHONY : CMakeFiles/piano.dir/include/Interface.cpp.obj.requires
+.PHONY : CMakeFiles/piano.dir/include/Piano.cpp.obj.requires
 
-CMakeFiles/piano.dir/include/Interface.cpp.obj.provides: CMakeFiles/piano.dir/include/Interface.cpp.obj.requires
-	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/include/Interface.cpp.obj.provides.build
-.PHONY : CMakeFiles/piano.dir/include/Interface.cpp.obj.provides
+CMakeFiles/piano.dir/include/Piano.cpp.obj.provides: CMakeFiles/piano.dir/include/Piano.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/include/Piano.cpp.obj.provides.build
+.PHONY : CMakeFiles/piano.dir/include/Piano.cpp.obj.provides
 
-CMakeFiles/piano.dir/include/Interface.cpp.obj.provides.build: CMakeFiles/piano.dir/include/Interface.cpp.obj
+CMakeFiles/piano.dir/include/Piano.cpp.obj.provides.build: CMakeFiles/piano.dir/include/Piano.cpp.obj
 
 
 # Object files for target piano
@@ -157,7 +157,7 @@ piano_OBJECTS = \
 "CMakeFiles/piano.dir/main.cpp.obj" \
 "CMakeFiles/piano.dir/include/Keyboard.cpp.obj" \
 "CMakeFiles/piano.dir/include/Note.cpp.obj" \
-"CMakeFiles/piano.dir/include/Interface.cpp.obj"
+"CMakeFiles/piano.dir/include/Piano.cpp.obj"
 
 # External object files for target piano
 piano_EXTERNAL_OBJECTS =
@@ -165,7 +165,7 @@ piano_EXTERNAL_OBJECTS =
 piano.exe: CMakeFiles/piano.dir/main.cpp.obj
 piano.exe: CMakeFiles/piano.dir/include/Keyboard.cpp.obj
 piano.exe: CMakeFiles/piano.dir/include/Note.cpp.obj
-piano.exe: CMakeFiles/piano.dir/include/Interface.cpp.obj
+piano.exe: CMakeFiles/piano.dir/include/Piano.cpp.obj
 piano.exe: CMakeFiles/piano.dir/build.make
 piano.exe: CMakeFiles/piano.dir/linklibs.rsp
 piano.exe: CMakeFiles/piano.dir/objects1.rsp
@@ -181,7 +181,7 @@ CMakeFiles/piano.dir/build: piano.exe
 CMakeFiles/piano.dir/requires: CMakeFiles/piano.dir/main.cpp.obj.requires
 CMakeFiles/piano.dir/requires: CMakeFiles/piano.dir/include/Keyboard.cpp.obj.requires
 CMakeFiles/piano.dir/requires: CMakeFiles/piano.dir/include/Note.cpp.obj.requires
-CMakeFiles/piano.dir/requires: CMakeFiles/piano.dir/include/Interface.cpp.obj.requires
+CMakeFiles/piano.dir/requires: CMakeFiles/piano.dir/include/Piano.cpp.obj.requires
 
 .PHONY : CMakeFiles/piano.dir/requires
 

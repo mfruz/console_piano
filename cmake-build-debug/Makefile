@@ -122,33 +122,6 @@ piano/fast:
 	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/build
 .PHONY : piano/fast
 
-include/Interface.obj: include/Interface.cpp.obj
-
-.PHONY : include/Interface.obj
-
-# target to build an object file
-include/Interface.cpp.obj:
-	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/include/Interface.cpp.obj
-.PHONY : include/Interface.cpp.obj
-
-include/Interface.i: include/Interface.cpp.i
-
-.PHONY : include/Interface.i
-
-# target to preprocess a source file
-include/Interface.cpp.i:
-	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/include/Interface.cpp.i
-.PHONY : include/Interface.cpp.i
-
-include/Interface.s: include/Interface.cpp.s
-
-.PHONY : include/Interface.s
-
-# target to generate assembly for a file
-include/Interface.cpp.s:
-	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/include/Interface.cpp.s
-.PHONY : include/Interface.cpp.s
-
 include/Keyboard.obj: include/Keyboard.cpp.obj
 
 .PHONY : include/Keyboard.obj
@@ -203,6 +176,33 @@ include/Note.cpp.s:
 	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/include/Note.cpp.s
 .PHONY : include/Note.cpp.s
 
+include/Piano.obj: include/Piano.cpp.obj
+
+.PHONY : include/Piano.obj
+
+# target to build an object file
+include/Piano.cpp.obj:
+	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/include/Piano.cpp.obj
+.PHONY : include/Piano.cpp.obj
+
+include/Piano.i: include/Piano.cpp.i
+
+.PHONY : include/Piano.i
+
+# target to preprocess a source file
+include/Piano.cpp.i:
+	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/include/Piano.cpp.i
+.PHONY : include/Piano.cpp.i
+
+include/Piano.s: include/Piano.cpp.s
+
+.PHONY : include/Piano.s
+
+# target to generate assembly for a file
+include/Piano.cpp.s:
+	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/include/Piano.cpp.s
+.PHONY : include/Piano.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -239,15 +239,15 @@ help:
 	@echo ... piano
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... include/Interface.obj
-	@echo ... include/Interface.i
-	@echo ... include/Interface.s
 	@echo ... include/Keyboard.obj
 	@echo ... include/Keyboard.i
 	@echo ... include/Keyboard.s
 	@echo ... include/Note.obj
 	@echo ... include/Note.i
 	@echo ... include/Note.s
+	@echo ... include/Piano.obj
+	@echo ... include/Piano.i
+	@echo ... include/Piano.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
