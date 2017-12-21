@@ -7,44 +7,37 @@
 #include <map>
 #include <vector>
 #include "Note.hpp"
+// idées pour les templates -> puisque l'opérateur [] ne marche pas avec la map, créer un itérator
+// avec le [] au lieu de faire at() à chaque fois
+
 
 class Keyboard {
 private:
-    static std::map<char, Note> m_range;
+    static std::map<char, Note> k_range;
 
-protected:
     // vector of all useful frequencies
-    const std::vector<double> m_frequencies = {
-            220.000, // A3
-            233.082, // A#3
-            246.942, // B3
-            261.626, // C4
-            277.183, // C#4
-            293.665, // D4
-            311.127, // D#4
-            329.628, // E4
-            349.228, // F4
-            369.994, // F#4
-            391.995, // G4
-            415.305, // G#4
-            440.000, // A4
-            466.164, // A#4
-            493.883, // B4
-            523.251  // C5
-    };
+    static std::map<double, string> k_noteNames;
 
 
 public:
     // getters
-    std::map<char, Note> &getRange();
-    const std::vector<double> &getFreqs();
+    std::map<char, Note> &k_getRange() const;
+    std::map<double, string> k_getNoteNames() const;
+
+    // browsing and display
+    void k_browseNotes() const;
+
 
     // constructor
     Keyboard() {};
 
+    // methods
+    void k_displayNote(char key);
 
-    //transpose
-    void transpose(int semitone);
+
+    void k_transpose(int semitone);
+
+
 };
 
 

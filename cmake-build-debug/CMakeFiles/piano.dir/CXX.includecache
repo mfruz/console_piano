@@ -23,7 +23,11 @@ Note.hpp
 C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Note.hpp
 
 C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Note.hpp
+iostream
+-
 windows.h
+-
+cstring
 -
 
 C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Piano.cpp
@@ -31,6 +35,10 @@ Piano.hpp
 C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Piano.hpp
 
 C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Piano.hpp
+Keyboard.hpp
+C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Keyboard.hpp
+Note.hpp
+C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Note.hpp
 
 C:/Users/Pc/Dropbox/IMAC2/C++/piano/main.cpp
 iostream

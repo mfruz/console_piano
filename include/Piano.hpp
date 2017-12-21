@@ -2,11 +2,18 @@
 // Created by Pc on 12/12/2017.
 //
 
-#ifndef PIANO_INTERFACE_HPP
-#define PIANO_INTERFACE_HPP
+#ifndef PIANO_HPP
+#define PIANO_HPP
+#include "Keyboard.hpp"
+#include "Note.hpp"
+
+enum STATE {
+
+};
+
+class Piano {
 
 
-class Interface {
 
 public:
     void run();
@@ -15,4 +22,4 @@ public:
 };
 
 
-#endif //PIANO_INTERFACE_HPP
+#endif //PIANO_HPP

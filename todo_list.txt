@@ -1,0 +1,9 @@
+quand le piano reçoit une touche en entrée il appelle :
+- k.play() qui appelle note.play()
+- k.display() qui va chercher le nom de la touche -> la fréquence -> le nom de la note
+
+
+iterator :
+pour la class Song ?
+template :
+class Note ?

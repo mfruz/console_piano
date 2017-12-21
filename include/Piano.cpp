@@ -3,3 +3,8 @@
 //
 
 #include "Piano.hpp"
+
+void run() {
+    Keyboard k;
+}
+
