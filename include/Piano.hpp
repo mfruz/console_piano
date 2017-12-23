@@ -1,6 +1,6 @@
 #ifndef PIANO_HPP
 #define PIANO_HPP
-#include "Keyboard.hpp"
+#include "KeyboardQW.hpp"
 #include "Note.hpp"
 #include <cstdio>
 #include <iostream>
@@ -25,6 +25,7 @@ public:
     void displayKeyboard();
 
     //keyboard layout detection
+    void keyboardInit();
     string keyboardLayout();
 };
 

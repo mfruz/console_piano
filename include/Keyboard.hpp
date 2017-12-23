@@ -1,5 +1,6 @@
 #ifndef PIANO_KEYBOARD_HPP
 #define PIANO_KEYBOARD_HPP
+
 #include <map>
 #include <vector>
 #include "Note.hpp"
@@ -8,16 +9,16 @@
 
 
 class Keyboard {
-private:
-    static std::map<char, Note> k_range;
+protected:
+    std::map<char, Note> k_range;
 
     // vector of all useful frequencies
-    static std::map<double, string> k_noteNames;
+    std::map<double, string> k_noteNames;
 
 
 public:
     // getters
-    std::map<char, Note> &k_getRange() const;
+    std::map<char, Note> k_getRange() const;
     std::map<double, string> k_getNoteNames() const;
 
     // browsing and display
@@ -26,6 +27,9 @@ public:
 
     // constructor
     Keyboard() {};
+    void k_initNotes();
+    virtual void k_initRange();
+
 
     // methods
     void k_play();

@@ -65,7 +65,7 @@ CMAKE_BINARY_DIR = C:\Users\Pc\Dropbox\IMAC2\C++\piano\cmake-build-debug
 CMakeFiles/piano.dir/all:
 	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/depend
 	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Pc\Dropbox\IMAC2\C++\piano\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5 "Built target piano"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Pc\Dropbox\IMAC2\C++\piano\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5,6 "Built target piano"
 .PHONY : CMakeFiles/piano.dir/all
 
 # Include target in all.
@@ -75,7 +75,7 @@ all: CMakeFiles/piano.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/piano.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Pc\Dropbox\IMAC2\C++\piano\cmake-build-debug\CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Pc\Dropbox\IMAC2\C++\piano\cmake-build-debug\CMakeFiles 6
 	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/piano.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Pc\Dropbox\IMAC2\C++\piano\cmake-build-debug\CMakeFiles 0
 .PHONY : CMakeFiles/piano.dir/rule

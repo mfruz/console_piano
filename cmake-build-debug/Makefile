@@ -149,6 +149,33 @@ include/Keyboard.cpp.s:
 	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/include/Keyboard.cpp.s
 .PHONY : include/Keyboard.cpp.s
 
+include/KeyboardQW.obj: include/KeyboardQW.cpp.obj
+
+.PHONY : include/KeyboardQW.obj
+
+# target to build an object file
+include/KeyboardQW.cpp.obj:
+	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/include/KeyboardQW.cpp.obj
+.PHONY : include/KeyboardQW.cpp.obj
+
+include/KeyboardQW.i: include/KeyboardQW.cpp.i
+
+.PHONY : include/KeyboardQW.i
+
+# target to preprocess a source file
+include/KeyboardQW.cpp.i:
+	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/include/KeyboardQW.cpp.i
+.PHONY : include/KeyboardQW.cpp.i
+
+include/KeyboardQW.s: include/KeyboardQW.cpp.s
+
+.PHONY : include/KeyboardQW.s
+
+# target to generate assembly for a file
+include/KeyboardQW.cpp.s:
+	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/include/KeyboardQW.cpp.s
+.PHONY : include/KeyboardQW.cpp.s
+
 include/Note.obj: include/Note.cpp.obj
 
 .PHONY : include/Note.obj
@@ -242,6 +269,9 @@ help:
 	@echo ... include/Keyboard.obj
 	@echo ... include/Keyboard.i
 	@echo ... include/Keyboard.s
+	@echo ... include/KeyboardQW.obj
+	@echo ... include/KeyboardQW.i
+	@echo ... include/KeyboardQW.s
 	@echo ... include/Note.obj
 	@echo ... include/Note.i
 	@echo ... include/Note.s

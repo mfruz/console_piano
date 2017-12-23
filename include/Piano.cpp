@@ -2,12 +2,11 @@
 
 void Piano::run() {
 
-    keyboardLayout();
-    static Keyboard k;
+    // test keyboard layout
+    this->keyboardInit();
+    this->home_message();
 
-    //this->home_message();
-
-    //this->p_open();
+    this->p_open();
 }
 
 void Piano::home_message() {
@@ -19,7 +18,7 @@ void Piano::home_message() {
 
     this->displayKeyboard();
 
-    std::cout << "            works with AZERTY and QWERTY keyboards         " << std::endl << std::endl;
+    //std::cout << "            works with AZERTY and QWERTY keyboards         " << std::endl << std::endl;
 }
 
 void Piano::p_open() {
@@ -83,10 +82,17 @@ void Piano::p_close() {
 
 
 // -----------------------------------------
+void Piano::keyboardInit() {
+    if(this->keyboardLayout() == "0000040C") {
+        static Keyboard k;
+    }
+    else
+        static KeyboardQW k;
+}
 
 string Piano::keyboardLayout() {
     TCHAR szKeyboard[KL_NAMELENGTH];
     GetKeyboardLayoutName(szKeyboard);
     string kbLayout = szKeyboard;
-    std::cout << kbLayout << std::endl;
+    return kbLayout;
 }

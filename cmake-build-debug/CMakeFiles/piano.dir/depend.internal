@@ -5,16 +5,23 @@ CMakeFiles/piano.dir/include/Keyboard.cpp.obj
  C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Keyboard.cpp
  C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Keyboard.hpp
  C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Note.hpp
+CMakeFiles/piano.dir/include/KeyboardQW.cpp.obj
+ C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Keyboard.hpp
+ C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/KeyboardQW.cpp
+ C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/KeyboardQW.hpp
+ C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Note.hpp
 CMakeFiles/piano.dir/include/Note.cpp.obj
  C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Note.cpp
  C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Note.hpp
 CMakeFiles/piano.dir/include/Piano.cpp.obj
  C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Keyboard.hpp
+ C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/KeyboardQW.hpp
  C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Note.hpp
  C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Piano.cpp
  C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Piano.hpp
 CMakeFiles/piano.dir/main.cpp.obj
  C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Keyboard.hpp
+ C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/KeyboardQW.hpp
  C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Note.hpp
  C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Piano.hpp
  C:/Users/Pc/Dropbox/IMAC2/C++/piano/main.cpp
