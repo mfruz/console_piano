@@ -63,6 +63,11 @@ void Keyboard::k_browseNotes() const {
 }
 
 
+void k_play() {
+
+}
+
+
 void Keyboard::k_displayNote(char key) {
     double freq = this->k_getRange().at(key).getFreq();
     //std::cout << freq << std::endl;

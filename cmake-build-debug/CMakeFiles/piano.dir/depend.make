@@ -15,5 +15,6 @@ CMakeFiles/piano.dir/include/Piano.cpp.obj: ../include/Piano.hpp
 
 CMakeFiles/piano.dir/main.cpp.obj: ../include/Keyboard.hpp
 CMakeFiles/piano.dir/main.cpp.obj: ../include/Note.hpp
+CMakeFiles/piano.dir/main.cpp.obj: ../include/Piano.hpp
 CMakeFiles/piano.dir/main.cpp.obj: ../main.cpp
 

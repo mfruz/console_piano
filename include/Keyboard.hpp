@@ -32,6 +32,7 @@ public:
     Keyboard() {};
 
     // methods
+    void k_play();
     void k_displayNote(char key);
 
 
