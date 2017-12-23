@@ -1,7 +1,3 @@
-//
-// Created by Pc on 05/12/2017.
-//
-
 #ifndef PIANO_KEYBOARD_HPP
 #define PIANO_KEYBOARD_HPP
 #include <map>

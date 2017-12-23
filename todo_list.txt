@@ -2,6 +2,14 @@ quand le piano reçoit une touche en entrée il appelle :
 - k.play() qui appelle note.play()
 - k.display() qui va chercher le nom de la touche -> la fréquence -> le nom de la note
 
+détection du type de clavier
+TCHAR szKeyboard[KL_NAMELENGTH];
+    GetKeyboardLayoutName(
+            szKeyboard
+    );
+
+    std::cout << szKeyboard << std::endl;
+
 
 iterator :
 pour la class Song ?

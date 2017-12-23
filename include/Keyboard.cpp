@@ -1,7 +1,3 @@
-//
-// Created by Pc on 05/12/2017.
-//
-
 #include "Keyboard.hpp"
 
 // vector of all useful frequencies

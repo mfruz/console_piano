@@ -1,11 +1,16 @@
-//
-// Created by Pc on 12/12/2017.
-//
-
 #include "Piano.hpp"
 
 void Piano::run() {
+
+    keyboardLayout();
     static Keyboard k;
+
+    //this->home_message();
+
+    //this->p_open();
+}
+
+void Piano::home_message() {
     std::cout << "==============================================================" << std::endl;
     std::cout << "------------------ C O N S O L E  P I A N O ------------------" << std::endl;
     std::cout << "==============================================================" << std::endl << std::endl;
@@ -14,7 +19,7 @@ void Piano::run() {
 
     this->displayKeyboard();
 
-    this->p_open();
+    std::cout << "            works with AZERTY and QWERTY keyboards         " << std::endl << std::endl;
 }
 
 void Piano::p_open() {
@@ -73,4 +78,15 @@ void Piano::p_listen() {
 
 void Piano::p_close() {
 
+}
+
+
+
+// -----------------------------------------
+
+string Piano::keyboardLayout() {
+    TCHAR szKeyboard[KL_NAMELENGTH];
+    GetKeyboardLayoutName(szKeyboard);
+    string kbLayout = szKeyboard;
+    std::cout << kbLayout << std::endl;
 }

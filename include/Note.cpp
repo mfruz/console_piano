@@ -1,7 +1,3 @@
-//
-// Created by Pc on 09/12/2017.
-//
-
 #include "Note.hpp"
 
 // constructor

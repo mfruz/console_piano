@@ -1,7 +1,3 @@
-//
-// Created by Pc on 09/12/2017.
-//
-
 #ifndef PIANO_NOTE_HPP
 #define PIANO_NOTE_HPP
 #include <iostream>

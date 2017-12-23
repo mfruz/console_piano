@@ -1,7 +1,3 @@
-//
-// Created by Pc on 12/12/2017.
-//
-
 #ifndef PIANO_HPP
 #define PIANO_HPP
 #include "Keyboard.hpp"
@@ -9,14 +5,8 @@
 #include <cstdio>
 #include <iostream>
 
-enum STATE {
-
-};
 
 class Piano {
-
-
-
 
 public:
     Piano(){};
@@ -30,8 +20,12 @@ public:
 
 
     // affichage
+    void home_message();
     void displayChoices();
     void displayKeyboard();
+
+    //keyboard layout detection
+    string keyboardLayout();
 };
 
 
