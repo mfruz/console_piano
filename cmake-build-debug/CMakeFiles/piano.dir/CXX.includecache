@@ -9,6 +9,8 @@
 C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Keyboard.cpp
 Keyboard.hpp
 C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Keyboard.hpp
+conio.h
+-
 
 C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Keyboard.hpp
 map
@@ -17,14 +19,6 @@ vector
 -
 Note.hpp
 C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Note.hpp
-
-C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/KeyboardQW.cpp
-KeyboardQW.hpp
-C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/KeyboardQW.hpp
-
-C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/KeyboardQW.hpp
-Keyboard.hpp
-C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Keyboard.hpp
 
 C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Note.cpp
 Note.hpp
@@ -43,8 +37,8 @@ Piano.hpp
 C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Piano.hpp
 
 C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Piano.hpp
-KeyboardQW.hpp
-C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/KeyboardQW.hpp
+Keyboard.hpp
+C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Keyboard.hpp
 Note.hpp
 C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Note.hpp
 cstdio

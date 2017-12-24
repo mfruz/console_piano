@@ -5,22 +5,15 @@ CMakeFiles/piano.dir/include/Keyboard.cpp.obj: ../include/Keyboard.cpp
 CMakeFiles/piano.dir/include/Keyboard.cpp.obj: ../include/Keyboard.hpp
 CMakeFiles/piano.dir/include/Keyboard.cpp.obj: ../include/Note.hpp
 
-CMakeFiles/piano.dir/include/KeyboardQW.cpp.obj: ../include/Keyboard.hpp
-CMakeFiles/piano.dir/include/KeyboardQW.cpp.obj: ../include/KeyboardQW.cpp
-CMakeFiles/piano.dir/include/KeyboardQW.cpp.obj: ../include/KeyboardQW.hpp
-CMakeFiles/piano.dir/include/KeyboardQW.cpp.obj: ../include/Note.hpp
-
 CMakeFiles/piano.dir/include/Note.cpp.obj: ../include/Note.cpp
 CMakeFiles/piano.dir/include/Note.cpp.obj: ../include/Note.hpp
 
 CMakeFiles/piano.dir/include/Piano.cpp.obj: ../include/Keyboard.hpp
-CMakeFiles/piano.dir/include/Piano.cpp.obj: ../include/KeyboardQW.hpp
 CMakeFiles/piano.dir/include/Piano.cpp.obj: ../include/Note.hpp
 CMakeFiles/piano.dir/include/Piano.cpp.obj: ../include/Piano.cpp
 CMakeFiles/piano.dir/include/Piano.cpp.obj: ../include/Piano.hpp
 
 CMakeFiles/piano.dir/main.cpp.obj: ../include/Keyboard.hpp
-CMakeFiles/piano.dir/main.cpp.obj: ../include/KeyboardQW.hpp
 CMakeFiles/piano.dir/main.cpp.obj: ../include/Note.hpp
 CMakeFiles/piano.dir/main.cpp.obj: ../include/Piano.hpp
 CMakeFiles/piano.dir/main.cpp.obj: ../main.cpp

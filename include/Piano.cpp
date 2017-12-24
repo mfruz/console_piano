@@ -62,9 +62,10 @@ void Piano::displayKeyboard() {
 void Piano::p_play() {
     std::cout << "==============================================================" << std::endl;
     std::cout << "                ~ now \"playing\" the piano ~                 " << std::endl;
-    std::cout << " white keys go from 'q' to 'm', black keys go from 'z' to 'o' " << std::endl;
     std::cout << "==============================================================" << std::endl;
     std::cout << "                                 Press [0] if you want to stop" << std::endl;
+
+    k.k_play();
 }
 
 void Piano::p_compose() {
@@ -82,12 +83,15 @@ void Piano::p_close() {
 
 
 // -----------------------------------------
+// if user keyboard is qwerty, then redeclare object k as a KeyboardQW
 void Piano::keyboardInit() {
-    if(this->keyboardLayout() == "0000040C") {
-        static Keyboard k;
+    if(this->keyboardLayout() != "0000040C") {
+        k.k_initRangeQW();
+        std::cout << "| ! | THIS KEYBOARD IS QWERTY | ! |" << std::endl;
     }
-    else
-        static KeyboardQW k;
+    else k.k_initRange();
+
+    k.k_initNotes();
 }
 
 string Piano::keyboardLayout() {

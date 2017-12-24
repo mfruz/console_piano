@@ -1,12 +1,14 @@
 #ifndef PIANO_HPP
 #define PIANO_HPP
-#include "KeyboardQW.hpp"
+#include "Keyboard.hpp"
 #include "Note.hpp"
 #include <cstdio>
 #include <iostream>
 
 
 class Piano {
+protected:
+    Keyboard k;
 
 public:
     Piano(){};

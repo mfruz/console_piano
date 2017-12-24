@@ -1,4 +1,5 @@
 #include "Keyboard.hpp"
+#include <conio.h>
 
 // vector of all useful frequencies
 void Keyboard::k_initNotes() {
@@ -27,25 +28,46 @@ void Keyboard::k_initNotes() {
 void Keyboard::k_initRange() {
     this->k_range =
     {
-        {'q', Note(220.000, 1000)},     // A3
-        {'z', Note(233.082, 500)},      // A#3
-        {'s', Note(246.942, 1000)},     // B3
-        {'d', Note(261.626, 1000)},     // C4
-        {'r', Note(277.183,500)},       // C#4
-        {'f', Note(293.665, 1000)},     // D4
-        {'t', Note(311.127,500)},       // D#4
-        {'g', Note(329.628, 1000)},     // E4
-        {'h', Note(349.228, 1000)},     // F4
-        {'u', Note(369.994,500)},       // F#4
-        {'j', Note(391.995, 1000)},     // G4
-        {'i', Note(415.305,500)},       // G#4
-        {'k', Note(440.000, 1000)},     // A4
-        {'o', Note(466.164,500)},       // A#4
-        {'l', Note(493.883, 1000)},     // B4
-        {'m', Note(523.251, 1000)}      // C5
+        {'q', Note(220.000, 250)},     // A3
+        {'z', Note(233.082, 250)},      // A#3
+        {'s', Note(246.942, 250)},     // B3
+        {'d', Note(261.626, 250)},     // C4
+        {'r', Note(277.183, 250)},       // C#4
+        {'f', Note(293.665, 250)},     // D4
+        {'t', Note(311.127, 250)},       // D#4
+        {'g', Note(329.628, 250)},     // E4
+        {'h', Note(349.228, 250)},     // F4
+        {'u', Note(369.994, 250)},       // F#4
+        {'j', Note(391.995, 250)},     // G4
+        {'i', Note(415.305, 250)},       // G#4
+        {'k', Note(440.000, 250)},     // A4
+        {'o', Note(466.164, 250)},       // A#4
+        {'l', Note(493.883, 250)},     // B4
+        {'m', Note(523.251, 250)}      // C5
     };
 }
 
+void Keyboard::k_initRangeQW() {
+    this->k_range =
+            {
+                    {'a', Note(220.000, 250)},     // A3
+                    {'w', Note(233.082, 250)},      // A#3
+                    {'s', Note(246.942, 250)},     // B3
+                    {'d', Note(261.626, 250)},     // C4
+                    {'r', Note(277.183, 250)},       // C#4
+                    {'f', Note(293.665, 250)},     // D4
+                    {'t', Note(311.127, 250)},       // D#4
+                    {'g', Note(329.628, 250)},     // E4
+                    {'h', Note(349.228, 250)},     // F4
+                    {'u', Note(369.994, 250)},       // F#4
+                    {'j', Note(391.995, 250)},     // G4
+                    {'i', Note(415.305, 250)},       // G#4
+                    {'k', Note(440.000, 250)},     // A4
+                    {'o', Note(466.164, 250)},       // A#4
+                    {'l', Note(493.883, 250)},     // B4
+                    {';', Note(523.251, 250)}      // C5
+            };
+}
 
 
 // getters
@@ -65,15 +87,24 @@ void Keyboard::k_browseNotes() const {
 }
 
 
-void k_play() {
-
+void Keyboard::k_play() {
+    char note;
+    do {
+        note = getch();
+        if(note == 0){
+            break;
+        }
+        this->k_displayNote(note);
+        this->k_getRange().at(note).play();
+    }
+    while(note != '0');
 }
 
 
 void Keyboard::k_displayNote(char key) {
     double freq = this->k_getRange().at(key).getFreq();
     //std::cout << freq << std::endl;
-    std::cout <<  this->k_getNoteNames().at(261.626) << std::endl;
+    std::cout << "["<<  this->k_getNoteNames().at(freq) << "] ";
 }
 
 void Keyboard::k_transpose(int semitone) {
@@ -96,3 +127,5 @@ void Keyboard::k_transpose(int semitone) {
         }*/
     }
 }
+
+

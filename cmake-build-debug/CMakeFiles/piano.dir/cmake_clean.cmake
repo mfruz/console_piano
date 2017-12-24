@@ -3,7 +3,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/piano.dir/include/Note.cpp.obj"
   "CMakeFiles/piano.dir/include/Piano.cpp.obj"
   "CMakeFiles/piano.dir/include/Keyboard.cpp.obj"
-  "CMakeFiles/piano.dir/include/KeyboardQW.cpp.obj"
   "piano.pdb"
   "piano.exe"
   "piano.exe.manifest"

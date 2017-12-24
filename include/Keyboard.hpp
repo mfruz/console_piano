@@ -28,7 +28,8 @@ public:
     // constructor
     Keyboard() {};
     void k_initNotes();
-    virtual void k_initRange();
+    void k_initRange();
+    void k_initRangeQW();
 
 
     // methods
@@ -37,8 +38,6 @@ public:
 
 
     void k_transpose(int semitone);
-
-
 };
 
 

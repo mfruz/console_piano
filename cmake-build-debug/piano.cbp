@@ -88,12 +88,6 @@
 		<Unit filename="C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Keyboard.hpp">
 			<Option target="piano"/>
 		</Unit>
-		<Unit filename="C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/KeyboardQW.cpp">
-			<Option target="piano"/>
-		</Unit>
-		<Unit filename="C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/KeyboardQW.hpp">
-			<Option target="piano"/>
-		</Unit>
 		<Unit filename="C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Note.cpp">
 			<Option target="piano"/>
 		</Unit>
