@@ -1,5 +1,7 @@
 #include "Piano.hpp"
+#include <algorithm>
 
+// ---------------------------------------------
 enum choice {
     PLAY,
     COMPOSE,
@@ -7,21 +9,25 @@ enum choice {
     CLOSE
 };
 
-static std::vector<char> label = {
+static std::vector<char> homeLabel = {
         '1',
         '2',
         '3',
         'x'
 };
 
-bool isGoodLabel(char c) {
+/*bool isGoodLabel(char c) {
     for(int i = PLAY; i < CLOSE; i++) {
-        if(label[i] == c) {
+        if(homeLabel[i] == c) {
             return true;
         }
     }
     return false;
-}
+}*/
+
+// ---------------------------------------------
+
+
 
 
 void Piano::run() {
@@ -50,16 +56,27 @@ void Piano::p_open() {
 }
 
 void Piano::displayChoices() {
-    std::cout << "Play freely [" << label[PLAY] << "]"
-            "  |  Compose song [" << label[COMPOSE] << "]"
-            "  |  Open score file [" << label[LOAD] << "]"
-            "  |  Close[" << label[CLOSE] << "]" << std::endl << std::endl;
+    std::cout << "Play freely [" << homeLabel[PLAY] << "]"
+            "  |  Compose song [" << homeLabel[COMPOSE] << "]"
+                      "  |  Open score file [" << homeLabel[LOAD] << "]"
+                      "  |  Close[" << homeLabel[CLOSE] << "]" << std::endl << std::endl;
     char choice;
 
-    while(!isGoodLabel(choice)) {
+    // working solution
+    /*while(!isGoodlabel(choice)) {
         std::cin >> choice;
         std::cin.ignore();
+    }*/
+
+    // with an iterator
+    do {
+        std::cin >> choice;
+        std::cin.ignore();
+        if(std::find(homeLabel.begin(), homeLabel.end(), choice) == homeLabel.end()) {
+            std::cout << "Please, enter a value that exists in the menu" << std::endl;
+        }
     }
+    while(std::find(homeLabel.begin(), homeLabel.end(), choice) == homeLabel.end());
 
 
     switch(choice) {
@@ -75,7 +92,7 @@ void Piano::displayChoices() {
         case 'x':
             this->p_close();
             break;
-        default :
+        default:
             break;
     }
 }
