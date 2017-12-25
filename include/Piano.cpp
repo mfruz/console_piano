@@ -1,5 +1,29 @@
 #include "Piano.hpp"
 
+enum choice {
+    PLAY,
+    COMPOSE,
+    LOAD,
+    CLOSE
+};
+
+static std::vector<char> label = {
+        '1',
+        '2',
+        '3',
+        'x'
+};
+
+bool isGoodLabel(char c) {
+    for(int i = PLAY; i < CLOSE; i++) {
+        if(label[i] == c) {
+            return true;
+        }
+    }
+    return false;
+}
+
+
 void Piano::run() {
 
     // test keyboard layout
@@ -26,25 +50,33 @@ void Piano::p_open() {
 }
 
 void Piano::displayChoices() {
-    std::cout << "Play freely [1]  |  Compose song [2]  |  Open score file [3]  |  Close[x]" << std::endl << std::endl;
-    int choice;
-    std::cin >> choice;
-    std::cin.ignore();
+    std::cout << "Play freely [" << label[PLAY] << "]"
+            "  |  Compose song [" << label[COMPOSE] << "]"
+            "  |  Open score file [" << label[LOAD] << "]"
+            "  |  Close[" << label[CLOSE] << "]" << std::endl << std::endl;
+    char choice;
+
+    while(!isGoodLabel(choice)) {
+        std::cin >> choice;
+        std::cin.ignore();
+    }
+
 
     switch(choice) {
-        case 1:
+        case '1':
             this->p_play();
             break;
-        case 2:
+        case '2':
             this->p_compose();
             break;
-        case 3:
+        case '3':
             this->p_listen();
             break;
         case 'x':
             this->p_close();
             break;
-        default: 1;
+        default :
+            break;
     }
 }
 void Piano::displayKeyboard() {
