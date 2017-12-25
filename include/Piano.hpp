@@ -16,19 +16,29 @@ public:
     void p_open();
     void p_close();
 
+    void homeMenu();
     void p_play();
     void p_compose();
     void p_listen();
 
 
-    // affichage
-    void home_message();
-    void displayChoices();
-    void displayKeyboard();
+    // calls
+    void callKeyboardPlay();
 
-    //keyboard layout detection
+    // display functions
+    void home_message();
+    void displayKeyboard();
+    void displayChoices();
+    void playMessage();
+    void quitSession();
+    void wrongMenuEntry();
+    void warnQwerty();
+    void whatNow();
+
+    // test functions
     void keyboardInit();
     string keyboardLayout();
+    void checkMenuEntry();
 };
 
 

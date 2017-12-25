@@ -1,5 +1,6 @@
 #include "Piano.hpp"
 #include <algorithm>
+#include <conio.h>
 
 // ---------------------------------------------
 enum choice {
@@ -15,65 +16,86 @@ static std::vector<char> homeLabel = {
         '3',
         'x'
 };
-
-/*bool isGoodLabel(char c) {
-    for(int i = PLAY; i < CLOSE; i++) {
-        if(homeLabel[i] == c) {
-            return true;
-        }
-    }
-    return false;
-}*/
-
 // ---------------------------------------------
 
 
 
 
 void Piano::run() {
-
-    // test keyboard layout
     this->keyboardInit();
     this->home_message();
-
     this->p_open();
 }
 
-void Piano::home_message() {
-    std::cout << "==============================================================" << std::endl;
-    std::cout << "------------------ C O N S O L E  P I A N O ------------------" << std::endl;
-    std::cout << "==============================================================" << std::endl << std::endl;
-
-    std::cout << "                    BE THE MOZART OF CODE                  " << std::endl;
-
-    this->displayKeyboard();
-
-    //std::cout << "            works with AZERTY and QWERTY keyboards         " << std::endl << std::endl;
-}
-
 void Piano::p_open() {
-    this->displayChoices();
+    this->homeMenu();
 }
 
-void Piano::displayChoices() {
-    std::cout << "Play freely [" << homeLabel[PLAY] << "]"
-            "  |  Compose song [" << homeLabel[COMPOSE] << "]"
-                      "  |  Open score file [" << homeLabel[LOAD] << "]"
-                      "  |  Close[" << homeLabel[CLOSE] << "]" << std::endl << std::endl;
+void Piano::homeMenu() {
+    this->displayChoices();
+    this->checkMenuEntry();
+}
+
+void Piano::p_play(){
+    this->playMessage();
+    this->callKeyboardPlay();
+}
+
+void Piano::p_compose() {
+
+}
+
+void Piano::p_listen() {
+
+}
+
+void Piano::p_close() {
+
+}
+
+
+// CALLS
+void Piano::callKeyboardPlay() {
+    char note;
+    do {
+        note = getch();
+        if(note == '0'){
+            std::cout << std::endl << std::endl;
+            this->quitSession();
+        }
+        k.k_displayNote(note);
+        k.k_getRange().at(note).play();
+    }
+    while(note != '0');
+}
+
+
+// CHECK AND TEST FUNCTIONS ----------------------------------------------
+void Piano::keyboardInit() {
+    if(this->keyboardLayout() != "0000040C") {
+        k.k_initRangeQW();
+        this->warnQwerty();
+    }
+    else k.k_initRange();
+
+    k.k_initNotes();
+}
+
+string Piano::keyboardLayout() {
+    TCHAR szKeyboard[KL_NAMELENGTH];
+    GetKeyboardLayoutName(szKeyboard);
+    string kbLayout = szKeyboard;
+    return kbLayout;
+}
+
+void Piano::checkMenuEntry() {
     char choice;
-
-    // working solution
-    /*while(!isGoodlabel(choice)) {
-        std::cin >> choice;
-        std::cin.ignore();
-    }*/
-
     // with an iterator
     do {
         std::cin >> choice;
         std::cin.ignore();
         if(std::find(homeLabel.begin(), homeLabel.end(), choice) == homeLabel.end()) {
-            std::cout << "Please, enter a value that exists in the menu" << std::endl;
+            this->wrongMenuEntry();
         }
     }
     while(std::find(homeLabel.begin(), homeLabel.end(), choice) == homeLabel.end());
@@ -96,56 +118,65 @@ void Piano::displayChoices() {
             break;
     }
 }
+
+
+// DISPLAY FUNCTIONS -----------------------------------------------------
+void Piano::home_message() {
+    std::cout << "==============================================================" << std::endl;
+    std::cout << "--------------------------------------------------------------" << std::endl;
+    this->displayKeyboard();
+    std::cout << "------------------- BE THE MOZART OF CODE --------------------" << std::endl << std::endl;
+
+
+
+    //std::cout << "            works with AZERTY and QWERTY keyboards         " << std::endl << std::endl;
+}
+
 void Piano::displayKeyboard() {
     std::cout << "          |  | | | |  |  | | | | | |  |  | | | |  |" << std::endl;
     std::cout << "          |  | | | |  |  | | | | | |  |  | | | |  |" << std::endl;
-    std::cout << "          |  | | | |  |  | | | | | |  |  | | | |  |" << std::endl;
+    std::cout << "          |  | |                             | |  |" << std::endl;
+    std::cout << "          |  | |  C O N S O L E  P I A N O   | |  |" << std::endl;
+    std::cout << "          |  | |                             | |  |" << std::endl;
     std::cout << "          |  |_| |_|  |  |_| |_| |_|  |  |_| |_|  |" << std::endl;
     std::cout << "          |   |   |   |   |   |   |   |   |   |   |" << std::endl;
     std::cout << "          |   |   |   |   |   |   |   |   |   |   |" << std::endl;
     std::cout << "          |___|___|___|___|___|___|___|___|___|___|" << std::endl << std::endl;
 }
 
+void Piano::displayChoices() {
+    std::cout << "--------------------------------------------------------------" << std::endl;
+    std::cout << "Play freely [" << homeLabel[PLAY] << "]"
+            "  |  Compose song [" << homeLabel[COMPOSE] << "]"
+                      "  |  Open score file [" << homeLabel[LOAD] << "]"
+                      "  |  Close[" << homeLabel[CLOSE] << "]" << std::endl << std::endl;
+}
 
+void Piano::wrongMenuEntry() {
+    std::cout << "Please, enter a value that exists in the menu" << std::endl;
+}
 
-void Piano::p_play() {
+void Piano::playMessage() {
     std::cout << "==============================================================" << std::endl;
     std::cout << "                ~ now \"playing\" the piano ~                 " << std::endl;
     std::cout << "==============================================================" << std::endl;
     std::cout << "                                 Press [0] if you want to stop" << std::endl;
 
-    k.k_play();
+    //k.k_play();
 }
 
-void Piano::p_compose() {
-
+void Piano::quitSession() {
+    this->whatNow();
+    this->p_open();
 }
 
-void Piano::p_listen() {
-
+void Piano::whatNow() {
+    std::cout << std::endl;
+    std::cout << "." << std::endl << "." << std::endl << "." << std::endl << "." << std::endl << "." << std::endl;
+    std::cout << "--------------------------------------------------------------" << std::endl;
+    std::cout << "- - - - - - - - What do you want to do now ? - - - - - - - - -" << std::endl;
 }
 
-void Piano::p_close() {
-
-}
-
-
-
-// -----------------------------------------
-// if user keyboard is qwerty, then redeclare object k as a KeyboardQW
-void Piano::keyboardInit() {
-    if(this->keyboardLayout() != "0000040C") {
-        k.k_initRangeQW();
-        std::cout << "| ! | THIS KEYBOARD IS QWERTY | ! |" << std::endl;
-    }
-    else k.k_initRange();
-
-    k.k_initNotes();
-}
-
-string Piano::keyboardLayout() {
-    TCHAR szKeyboard[KL_NAMELENGTH];
-    GetKeyboardLayoutName(szKeyboard);
-    string kbLayout = szKeyboard;
-    return kbLayout;
+void Piano::warnQwerty() {
+    std::cout << "| ! | THIS KEYBOARD IS QWERTY | ! |" << std::endl;
 }
