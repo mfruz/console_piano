@@ -87,17 +87,9 @@ void Keyboard::k_browseNotes() const {
 }
 
 
-void Keyboard::k_play() {
-    char note;
-    do {
-        note = getch();
-        if(note == 0){
-            break;
-        }
+void Keyboard::k_play(char note) {
         this->k_displayNote(note);
         this->k_getRange().at(note).play();
-    }
-    while(note != '0');
 }
 
 

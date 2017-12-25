@@ -33,7 +33,7 @@ public:
 
 
     // methods
-    void k_play();
+    void k_play(char note);
     void k_displayNote(char key);
 
 

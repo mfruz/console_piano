@@ -62,9 +62,9 @@ void Piano::callKeyboardPlay() {
         if(note == '0'){
             std::cout << std::endl << std::endl;
             this->quitSession();
+            return;
         }
-        k.k_displayNote(note);
-        k.k_getRange().at(note).play();
+        k.k_play(note);
     }
     while(note != '0');
 }
