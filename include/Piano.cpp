@@ -1,6 +1,7 @@
 #include "Piano.hpp"
 #include <algorithm>
 #include <conio.h>
+#include <stdexcept>
 
 // ---------------------------------------------
 enum choice {
@@ -57,6 +58,9 @@ void Piano::p_close() {
 // CALLS
 void Piano::callKeyboardPlay() {
     char note;
+
+    /* NE PAS OUBLIER DE GERER LES OUT OF RANGE */
+
     do {
         note = getch();
         if(note == '0'){
@@ -64,10 +68,16 @@ void Piano::callKeyboardPlay() {
             this->quitSession();
             return;
         }
-        k.k_play(note);
+        try {
+            k.k_play(note);
+        }
+        catch(const std::out_of_range&) {
+            // ignore
+        }
     }
     while(note != '0');
 }
+
 
 
 // CHECK AND TEST FUNCTIONS ----------------------------------------------
@@ -99,7 +109,6 @@ void Piano::checkMenuEntry() {
         }
     }
     while(std::find(homeLabel.begin(), homeLabel.end(), choice) == homeLabel.end());
-
 
     switch(choice) {
         case '1':

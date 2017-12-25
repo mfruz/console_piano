@@ -39,6 +39,8 @@ algorithm
 -
 conio.h
 -
+stdexcept
+-
 
 C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Piano.hpp
 Keyboard.hpp

@@ -39,6 +39,7 @@ public:
     void keyboardInit();
     string keyboardLayout();
     void checkMenuEntry();
+    bool checkRange(char key);
 };
 
 
