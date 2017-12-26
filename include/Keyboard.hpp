@@ -3,9 +3,10 @@
 
 #include <map>
 #include <vector>
+#include <cstring>
 #include "Note.hpp"
-// idées pour les templates -> puisque l'opérateur [] ne marche pas avec la map, créer un itérator
-// avec le [] au lieu de faire at() à chaque fois
+
+using std::string;
 
 
 class Keyboard {
@@ -35,8 +36,6 @@ public:
     // methods
     void k_play(char note);
     void k_displayNote(char key);
-
-
     void k_transpose(int semitone);
 };
 

@@ -17,6 +17,8 @@ map
 -
 vector
 -
+cstring
+-
 Note.hpp
 C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Note.hpp
 
@@ -28,8 +30,6 @@ C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Note.hpp
 iostream
 -
 windows.h
--
-cstring
 -
 
 C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Piano.cpp

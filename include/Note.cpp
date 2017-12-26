@@ -1,8 +1,5 @@
 #include "Note.hpp"
 
-// constructor
-
-
 // getters
 double Note::getFreq() const {
     return this->m_frequency;

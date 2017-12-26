@@ -1,26 +1,9 @@
 AUJOURD'HUI :
-rendre le clavier libre opérationnel
-ça commence par :
-- associer chaque touche du clavier à une note
-- faire une boucle while ?
+fileManager
+Song
 
-- faire une fonction qui checke si la key est bien dans la map, sinon il fait rien
-- et ensuite il play
-
-
-
-quand le piano reçoit une touche en entrée il appelle :
-- k.play() qui appelle note.play()
-- k.display() qui va chercher le nom de la touche -> la fréquence -> le nom de la note
-
-détection du type de clavier
-TCHAR szKeyboard[KL_NAMELENGTH];
-    GetKeyboardLayoutName(
-            szKeyboard
-    );
-
-    std::cout << szKeyboard << std::endl;
-
+surcharge d'opérateur
+Note++ -> augmente sa durée
 
 iterator :
 pour la class Song ?

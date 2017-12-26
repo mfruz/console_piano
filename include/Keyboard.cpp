@@ -28,45 +28,45 @@ void Keyboard::k_initNotes() {
 void Keyboard::k_initRange() {
     this->k_range =
     {
-        {'q', Note(220.000, 250)},     // A3
-        {'z', Note(233.082, 250)},      // A#3
-        {'s', Note(246.942, 250)},     // B3
-        {'d', Note(261.626, 250)},     // C4
-        {'r', Note(277.183, 250)},       // C#4
-        {'f', Note(293.665, 250)},     // D4
-        {'t', Note(311.127, 250)},       // D#4
-        {'g', Note(329.628, 250)},     // E4
-        {'h', Note(349.228, 250)},     // F4
-        {'u', Note(369.994, 250)},       // F#4
-        {'j', Note(391.995, 250)},     // G4
-        {'i', Note(415.305, 250)},       // G#4
-        {'k', Note(440.000, 250)},     // A4
-        {'o', Note(466.164, 250)},       // A#4
-        {'l', Note(493.883, 250)},     // B4
-        {'m', Note(523.251, 250)}      // C5
+        {'q', Note(220.000, QUAVER)},   // A3
+        {'z', Note(233.082, QUAVER)},   // A#3
+        {'s', Note(246.942, QUAVER)},   // B3
+        {'d', Note(261.626, QUAVER)},   // C4
+        {'r', Note(277.183, QUAVER)},   // C#4
+        {'f', Note(293.665, QUAVER)},   // D4
+        {'t', Note(311.127, QUAVER)},   // D#4
+        {'g', Note(329.628, QUAVER)},   // E4
+        {'h', Note(349.228, QUAVER)},   // F4
+        {'u', Note(369.994, QUAVER)},   // F#4
+        {'j', Note(391.995, QUAVER)},   // G4
+        {'i', Note(415.305, QUAVER)},   // G#4
+        {'k', Note(440.000, QUAVER)},   // A4
+        {'o', Note(466.164, QUAVER)},   // A#4
+        {'l', Note(493.883, QUAVER)},   // B4
+        {'m', Note(523.251, QUAVER)}    // C5
     };
 }
 
 void Keyboard::k_initRangeQW() {
     this->k_range =
-            {
-                    {'a', Note(220.000, 250)},     // A3
-                    {'w', Note(233.082, 250)},      // A#3
-                    {'s', Note(246.942, 250)},     // B3
-                    {'d', Note(261.626, 250)},     // C4
-                    {'r', Note(277.183, 250)},       // C#4
-                    {'f', Note(293.665, 250)},     // D4
-                    {'t', Note(311.127, 250)},       // D#4
-                    {'g', Note(329.628, 250)},     // E4
-                    {'h', Note(349.228, 250)},     // F4
-                    {'u', Note(369.994, 250)},       // F#4
-                    {'j', Note(391.995, 250)},     // G4
-                    {'i', Note(415.305, 250)},       // G#4
-                    {'k', Note(440.000, 250)},     // A4
-                    {'o', Note(466.164, 250)},       // A#4
-                    {'l', Note(493.883, 250)},     // B4
-                    {';', Note(523.251, 250)}      // C5
-            };
+    {
+        {'a', Note(220.000, QUAVER)},     // A3
+        {'w', Note(233.082, QUAVER)},     // A#3
+        {'s', Note(246.942, QUAVER)},     // B3
+        {'d', Note(261.626, QUAVER)},     // C4
+        {'r', Note(277.183, QUAVER)},     // C#4
+        {'f', Note(293.665, QUAVER)},     // D4
+        {'t', Note(311.127, QUAVER)},     // D#4
+        {'g', Note(329.628, QUAVER)},     // E4
+        {'h', Note(349.228, QUAVER)},     // F4
+        {'u', Note(369.994, QUAVER)},     // F#4
+        {'j', Note(391.995, QUAVER)},     // G4
+        {'i', Note(415.305, QUAVER)},     // G#4
+        {'k', Note(440.000, QUAVER)},     // A4
+        {'o', Note(466.164, QUAVER)},     // A#4
+        {'l', Note(493.883, QUAVER)},     // B4
+        {';', Note(523.251, QUAVER)}      // C5
+    };
 }
 
 

@@ -42,5 +42,4 @@ public:
     bool checkRange(char key);
 };
 
-
 #endif //PIANO_HPP
