@@ -11,7 +11,7 @@ enum choice {
     CLOSE
 };
 
-static std::vector<char> homeLabel = {
+const std::vector<char> homeLabel = {
         '1',
         '2',
         '3',
@@ -102,8 +102,7 @@ void Piano::checkMenuEntry() {
     char choice;
     // with an iterator
     do {
-        std::cin >> choice;
-        std::cin.ignore();
+        choice = getch();
         if(std::find(homeLabel.begin(), homeLabel.end(), choice) == homeLabel.end()) {
             this->wrongMenuEntry();
         }
