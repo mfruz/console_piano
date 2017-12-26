@@ -152,12 +152,62 @@ CMakeFiles/piano.dir/include/Keyboard.cpp.obj.provides: CMakeFiles/piano.dir/inc
 CMakeFiles/piano.dir/include/Keyboard.cpp.obj.provides.build: CMakeFiles/piano.dir/include/Keyboard.cpp.obj
 
 
+CMakeFiles/piano.dir/include/Song.cpp.obj: CMakeFiles/piano.dir/flags.make
+CMakeFiles/piano.dir/include/Song.cpp.obj: ../include/Song.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Pc\Dropbox\IMAC2\C++\piano\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/piano.dir/include/Song.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\piano.dir\include\Song.cpp.obj -c C:\Users\Pc\Dropbox\IMAC2\C++\piano\include\Song.cpp
+
+CMakeFiles/piano.dir/include/Song.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/piano.dir/include/Song.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Pc\Dropbox\IMAC2\C++\piano\include\Song.cpp > CMakeFiles\piano.dir\include\Song.cpp.i
+
+CMakeFiles/piano.dir/include/Song.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/piano.dir/include/Song.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Pc\Dropbox\IMAC2\C++\piano\include\Song.cpp -o CMakeFiles\piano.dir\include\Song.cpp.s
+
+CMakeFiles/piano.dir/include/Song.cpp.obj.requires:
+
+.PHONY : CMakeFiles/piano.dir/include/Song.cpp.obj.requires
+
+CMakeFiles/piano.dir/include/Song.cpp.obj.provides: CMakeFiles/piano.dir/include/Song.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/include/Song.cpp.obj.provides.build
+.PHONY : CMakeFiles/piano.dir/include/Song.cpp.obj.provides
+
+CMakeFiles/piano.dir/include/Song.cpp.obj.provides.build: CMakeFiles/piano.dir/include/Song.cpp.obj
+
+
+CMakeFiles/piano.dir/include/Silence.cpp.obj: CMakeFiles/piano.dir/flags.make
+CMakeFiles/piano.dir/include/Silence.cpp.obj: ../include/Silence.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Pc\Dropbox\IMAC2\C++\piano\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/piano.dir/include/Silence.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\piano.dir\include\Silence.cpp.obj -c C:\Users\Pc\Dropbox\IMAC2\C++\piano\include\Silence.cpp
+
+CMakeFiles/piano.dir/include/Silence.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/piano.dir/include/Silence.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Pc\Dropbox\IMAC2\C++\piano\include\Silence.cpp > CMakeFiles\piano.dir\include\Silence.cpp.i
+
+CMakeFiles/piano.dir/include/Silence.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/piano.dir/include/Silence.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Pc\Dropbox\IMAC2\C++\piano\include\Silence.cpp -o CMakeFiles\piano.dir\include\Silence.cpp.s
+
+CMakeFiles/piano.dir/include/Silence.cpp.obj.requires:
+
+.PHONY : CMakeFiles/piano.dir/include/Silence.cpp.obj.requires
+
+CMakeFiles/piano.dir/include/Silence.cpp.obj.provides: CMakeFiles/piano.dir/include/Silence.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/include/Silence.cpp.obj.provides.build
+.PHONY : CMakeFiles/piano.dir/include/Silence.cpp.obj.provides
+
+CMakeFiles/piano.dir/include/Silence.cpp.obj.provides.build: CMakeFiles/piano.dir/include/Silence.cpp.obj
+
+
 # Object files for target piano
 piano_OBJECTS = \
 "CMakeFiles/piano.dir/main.cpp.obj" \
 "CMakeFiles/piano.dir/include/Note.cpp.obj" \
 "CMakeFiles/piano.dir/include/Piano.cpp.obj" \
-"CMakeFiles/piano.dir/include/Keyboard.cpp.obj"
+"CMakeFiles/piano.dir/include/Keyboard.cpp.obj" \
+"CMakeFiles/piano.dir/include/Song.cpp.obj" \
+"CMakeFiles/piano.dir/include/Silence.cpp.obj"
 
 # External object files for target piano
 piano_EXTERNAL_OBJECTS =
@@ -166,11 +216,13 @@ piano.exe: CMakeFiles/piano.dir/main.cpp.obj
 piano.exe: CMakeFiles/piano.dir/include/Note.cpp.obj
 piano.exe: CMakeFiles/piano.dir/include/Piano.cpp.obj
 piano.exe: CMakeFiles/piano.dir/include/Keyboard.cpp.obj
+piano.exe: CMakeFiles/piano.dir/include/Song.cpp.obj
+piano.exe: CMakeFiles/piano.dir/include/Silence.cpp.obj
 piano.exe: CMakeFiles/piano.dir/build.make
 piano.exe: CMakeFiles/piano.dir/linklibs.rsp
 piano.exe: CMakeFiles/piano.dir/objects1.rsp
 piano.exe: CMakeFiles/piano.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Pc\Dropbox\IMAC2\C++\piano\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable piano.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Pc\Dropbox\IMAC2\C++\piano\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable piano.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\piano.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -182,6 +234,8 @@ CMakeFiles/piano.dir/requires: CMakeFiles/piano.dir/main.cpp.obj.requires
 CMakeFiles/piano.dir/requires: CMakeFiles/piano.dir/include/Note.cpp.obj.requires
 CMakeFiles/piano.dir/requires: CMakeFiles/piano.dir/include/Piano.cpp.obj.requires
 CMakeFiles/piano.dir/requires: CMakeFiles/piano.dir/include/Keyboard.cpp.obj.requires
+CMakeFiles/piano.dir/requires: CMakeFiles/piano.dir/include/Song.cpp.obj.requires
+CMakeFiles/piano.dir/requires: CMakeFiles/piano.dir/include/Silence.cpp.obj.requires
 
 .PHONY : CMakeFiles/piano.dir/requires
 

@@ -203,6 +203,60 @@ include/Piano.cpp.s:
 	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/include/Piano.cpp.s
 .PHONY : include/Piano.cpp.s
 
+include/Silence.obj: include/Silence.cpp.obj
+
+.PHONY : include/Silence.obj
+
+# target to build an object file
+include/Silence.cpp.obj:
+	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/include/Silence.cpp.obj
+.PHONY : include/Silence.cpp.obj
+
+include/Silence.i: include/Silence.cpp.i
+
+.PHONY : include/Silence.i
+
+# target to preprocess a source file
+include/Silence.cpp.i:
+	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/include/Silence.cpp.i
+.PHONY : include/Silence.cpp.i
+
+include/Silence.s: include/Silence.cpp.s
+
+.PHONY : include/Silence.s
+
+# target to generate assembly for a file
+include/Silence.cpp.s:
+	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/include/Silence.cpp.s
+.PHONY : include/Silence.cpp.s
+
+include/Song.obj: include/Song.cpp.obj
+
+.PHONY : include/Song.obj
+
+# target to build an object file
+include/Song.cpp.obj:
+	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/include/Song.cpp.obj
+.PHONY : include/Song.cpp.obj
+
+include/Song.i: include/Song.cpp.i
+
+.PHONY : include/Song.i
+
+# target to preprocess a source file
+include/Song.cpp.i:
+	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/include/Song.cpp.i
+.PHONY : include/Song.cpp.i
+
+include/Song.s: include/Song.cpp.s
+
+.PHONY : include/Song.s
+
+# target to generate assembly for a file
+include/Song.cpp.s:
+	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/include/Song.cpp.s
+.PHONY : include/Song.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -248,6 +302,12 @@ help:
 	@echo ... include/Piano.obj
 	@echo ... include/Piano.i
 	@echo ... include/Piano.s
+	@echo ... include/Silence.obj
+	@echo ... include/Silence.i
+	@echo ... include/Silence.s
+	@echo ... include/Song.obj
+	@echo ... include/Song.i
+	@echo ... include/Song.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

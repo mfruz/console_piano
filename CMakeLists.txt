@@ -3,5 +3,5 @@ project(piano)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES main.cpp include/Note.cpp include/Note.hpp include/Piano.cpp include/Piano.hpp include/Keyboard.cpp include/Keyboard.hpp)
-add_executable(piano ${SOURCE_FILES} include/Keyboard.cpp include/Keyboard.hpp)
+set(SOURCE_FILES main.cpp include/Note.cpp include/Note.hpp include/Piano.cpp include/Piano.hpp include/Keyboard.cpp include/Keyboard.hpp include/Song.cpp include/Song.hpp include/Silence.cpp include/Silence.hpp)
+add_executable(piano ${SOURCE_FILES} include/Keyboard.cpp include/Keyboard.hpp include/Song.cpp include/Song.hpp include/Silence.cpp include/Silence.hpp)

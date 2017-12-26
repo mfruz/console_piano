@@ -12,9 +12,19 @@ CMakeFiles/piano.dir/include/Piano.cpp.obj: ../include/Keyboard.hpp
 CMakeFiles/piano.dir/include/Piano.cpp.obj: ../include/Note.hpp
 CMakeFiles/piano.dir/include/Piano.cpp.obj: ../include/Piano.cpp
 CMakeFiles/piano.dir/include/Piano.cpp.obj: ../include/Piano.hpp
+CMakeFiles/piano.dir/include/Piano.cpp.obj: ../include/Song.hpp
+
+CMakeFiles/piano.dir/include/Silence.cpp.obj: ../include/Note.hpp
+CMakeFiles/piano.dir/include/Silence.cpp.obj: ../include/Silence.cpp
+CMakeFiles/piano.dir/include/Silence.cpp.obj: ../include/Silence.hpp
+
+CMakeFiles/piano.dir/include/Song.cpp.obj: ../include/Note.hpp
+CMakeFiles/piano.dir/include/Song.cpp.obj: ../include/Song.cpp
+CMakeFiles/piano.dir/include/Song.cpp.obj: ../include/Song.hpp
 
 CMakeFiles/piano.dir/main.cpp.obj: ../include/Keyboard.hpp
 CMakeFiles/piano.dir/main.cpp.obj: ../include/Note.hpp
 CMakeFiles/piano.dir/main.cpp.obj: ../include/Piano.hpp
+CMakeFiles/piano.dir/main.cpp.obj: ../include/Song.hpp
 CMakeFiles/piano.dir/main.cpp.obj: ../main.cpp
 

@@ -1,5 +1,4 @@
 #include "Keyboard.hpp"
-#include <conio.h>
 
 // vector of all useful frequencies
 void Keyboard::k_initNotes() {

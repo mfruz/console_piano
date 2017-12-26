@@ -13,8 +13,18 @@ CMakeFiles/piano.dir/include/Piano.cpp.obj
  C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Note.hpp
  C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Piano.cpp
  C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Piano.hpp
+ C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Song.hpp
+CMakeFiles/piano.dir/include/Silence.cpp.obj
+ C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Note.hpp
+ C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Silence.cpp
+ C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Silence.hpp
+CMakeFiles/piano.dir/include/Song.cpp.obj
+ C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Note.hpp
+ C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Song.cpp
+ C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Song.hpp
 CMakeFiles/piano.dir/main.cpp.obj
  C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Keyboard.hpp
  C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Note.hpp
  C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Piano.hpp
+ C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Song.hpp
  C:/Users/Pc/Dropbox/IMAC2/C++/piano/main.cpp

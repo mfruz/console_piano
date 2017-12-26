@@ -2,6 +2,7 @@
 #define PIANO_HPP
 #include "Keyboard.hpp"
 #include "Note.hpp"
+#include "Song.hpp"
 #include <cstdio>
 #include <iostream>
 
@@ -25,6 +26,13 @@ public:
     // calls
     void callKeyboardPlay();
 
+    Song initSong();
+    string askTitle();
+    string askComposer();
+    bool askSaveSong();
+    void saveSong(bool save);
+    void addSongInfo(Song s);
+
     // display functions
     void home_message();
     void displayKeyboard();
@@ -34,6 +42,8 @@ public:
     void wrongMenuEntry();
     void warnQwerty();
     void whatNow();
+
+    void composeMessage();
 
     // test functions
     void keyboardInit();
