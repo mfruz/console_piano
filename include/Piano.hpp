@@ -25,12 +25,13 @@ public:
 
     // calls
     void callKeyboardPlay();
+    void composeAndPlay(Song s);
 
     Song initSong();
     string askTitle();
     string askComposer();
-    bool askSaveSong();
-    void saveSong(bool save);
+    void askSaveSong(Song s);
+    void saveSong(Song s);
     void addSongInfo(Song s);
 
     // display functions

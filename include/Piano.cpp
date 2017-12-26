@@ -11,7 +11,6 @@ enum choice {
     CLOSE
 };
 
-static int state;
 
 const std::vector<char> homeLabel = {
         '1',
@@ -21,8 +20,6 @@ const std::vector<char> homeLabel = {
 };
 
 // ---------------------------------------------
-
-
 
 
 void Piano::run() {
@@ -41,23 +38,20 @@ void Piano::homeMenu() {
 }
 
 void Piano::p_play(){
-    state = PLAY;
     this->playMessage();
     this->callKeyboardPlay();
+    this->quitSession();
 }
 
 void Piano::p_compose() {
-    state = COMPOSE;
     this->composeMessage();
-    this->callKeyboardPlay();
     Song s = this->initSong();
-    bool save = this->askSaveSong();
-    this->saveSong(save);
-    //this->addSongInfo(s);
+    this->composeAndPlay(s);
+    this->askSaveSong(s);
+    this->quitSession();
 }
 
 void Piano::p_listen() {
-    state = LOAD;
 
 }
 
@@ -70,10 +64,7 @@ void Piano::callKeyboardPlay() {
         note = getch();
         if(note == '0'){
             std::cout << std::endl << std::endl;
-            if(state == PLAY) {
-                this->quitSession();
-            }
-            else return;
+            return;
         }
         try {
             k.k_play(note);
@@ -85,6 +76,24 @@ void Piano::callKeyboardPlay() {
     while(note != '0');
 }
 
+void Piano::composeAndPlay(Song s) {
+    char key;
+    do {
+        key = getch();
+        if(key == '0'){
+            std::cout << std::endl << std::endl;
+            return;
+        }
+        try {
+            k.k_play(key);
+            s.s_addNote(k.k_getRange().at(key));
+        }
+        catch(const std::out_of_range&) {
+            // ignore
+        }
+    }
+    while(key != '0');
+}
 
 
 // CHECK AND TEST FUNCTIONS ----------------------------------------------
@@ -134,6 +143,60 @@ void Piano::checkMenuEntry() {
 }
 
 
+// SONG FUNCTIONS --------------------------------------------------------
+Song Piano::initSong() {
+    Song s;
+    return s;
+}
+
+string Piano::askTitle() {
+    string title;
+    std::cout << "Choose a title for your song :" << std::endl;
+    std::getline(std::cin, title);
+    std::cout << "Title : " << title << std::endl;
+
+    return title;
+}
+
+string Piano::askComposer() {
+    string composer;
+    std::cout << "Who composed this song ?" << std::endl;
+    std::getline(std::cin, composer);
+    std::cout << "Composer : " << composer << std::endl;
+    return composer;
+}
+
+void Piano::askSaveSong(Song s) {
+    std::cout << "Do you want to save your song ? [y/n]" << std::endl;
+    char choice;
+    while(choice != 'y' && choice != 'n') {
+        choice = getch();
+    }
+    switch(choice) {
+        case 'y':
+            this->saveSong(s);
+        case 'n':
+            return;
+    }
+}
+
+void Piano::saveSong(Song s) {
+    this->addSongInfo(s);
+
+
+    // SAVE VECTOR IN A .TXT FILE
+
+
+    std::cout << "lol" ;
+    return;
+}
+
+void Piano::addSongInfo(Song s) {
+    s.s_setTitle(this->askTitle());
+    s.s_setComposer(this->askComposer());
+}
+
+
 // DISPLAY FUNCTIONS -----------------------------------------------------
 void Piano::home_message() {
     std::cout << "==============================================================" << std::endl;
@@ -180,6 +243,7 @@ void Piano::playMessage() {
 }
 
 void Piano::quitSession() {
+    std::cout << std::endl << std::endl;
     this->whatNow();
     this->p_open();
 }
@@ -195,57 +259,15 @@ void Piano::warnQwerty() {
     std::cout << "| ! | THIS KEYBOARD IS QWERTY | ! |" << std::endl;
 }
 
-
 void Piano::composeMessage() {
     std::cout << std::endl << std::endl;
-    std::cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << std::endl;
-    std::cout << "~ - - - - - - - - - MOZART MODE: ACTIVATED - - - - - - - - - ~" << std::endl;
-}
-
-
-// SONG FUNCTIONS
-
-Song Piano::initSong() {
-    Song s;
-    return s;
-}
-
-
-string Piano::askTitle() {
-    string title;
-    std::cout << "Choose a title for your song :" << std::endl;
-    std::getline(std::cin, title);
-    std::cout << "Title : " << title << std::endl;
-
-    return title;
-}
-string Piano::askComposer() {
-    string composer;
-    std::cout << "Who composed this song ?" << std::endl;
-    std::getline(std::cin, composer);
-    std::cout << "Composer : " << composer << std::endl;
-    return composer;
-}
-
-bool Piano::askSaveSong() {
-    std::cout << "Do you want to save your song ? [y/n]" << std::endl;
-    char choice;
-    while(choice != 'y' && choice != 'n') {
-        choice = getch();
-    }
-    switch(choice) {
-        case 'y':
-            return 1;
-        case 'n':
-            return 0;
-    }
-}
-
-void Piano::saveSong(bool save) {
+    std::cout << " ____________________________________________________________ " << std::endl;
+    std::cout << "|                                                            |" << std::endl;
+    std::cout << "|                   MOZART MODE: ACTIVATED                   |" << std::endl;
+    std::cout << "|____________________________________________________________|" << std::endl;
+    std::cout << "          |  | | | |  |  | | | | | |  |  | | | |  |" << std::endl;
+    std::cout << "          |  |_| |_|  |  |_| |_| |_|  |  |_| |_|  |" << std::endl;
+    std::cout << "          |___|___|___|___|___|___|___|___|___|___|" << std::endl << std::endl;
 
 }
 
-void Piano::addSongInfo(Song s) {
-    s.s_setTitle(this->askTitle());
-    s.s_setComposer(this->askComposer());
-}
