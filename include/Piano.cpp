@@ -61,6 +61,8 @@ void Piano::p_listen() {
     }
     else f.displayLoadError();
 
+    f.close();
+
     this->quitSession();
 //    f.read("lol.txt");
 }
