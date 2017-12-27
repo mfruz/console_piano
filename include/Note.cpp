@@ -1,12 +1,14 @@
 #include "Note.hpp"
 
+
 // getters
 double Note::getFreq() const {
     return this->m_frequency;
 }
-int Note::getDuration() const {
+unsigned int Note::getDuration() const {
     return this->m_duration;
 }
+
 
 // setters
 void Note::setFreq(double freq) {

@@ -122,6 +122,33 @@ piano/fast:
 	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/build
 .PHONY : piano/fast
 
+include/FileManager.obj: include/FileManager.cpp.obj
+
+.PHONY : include/FileManager.obj
+
+# target to build an object file
+include/FileManager.cpp.obj:
+	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/include/FileManager.cpp.obj
+.PHONY : include/FileManager.cpp.obj
+
+include/FileManager.i: include/FileManager.cpp.i
+
+.PHONY : include/FileManager.i
+
+# target to preprocess a source file
+include/FileManager.cpp.i:
+	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/include/FileManager.cpp.i
+.PHONY : include/FileManager.cpp.i
+
+include/FileManager.s: include/FileManager.cpp.s
+
+.PHONY : include/FileManager.s
+
+# target to generate assembly for a file
+include/FileManager.cpp.s:
+	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/include/FileManager.cpp.s
+.PHONY : include/FileManager.cpp.s
+
 include/Keyboard.obj: include/Keyboard.cpp.obj
 
 .PHONY : include/Keyboard.obj
@@ -293,6 +320,9 @@ help:
 	@echo ... piano
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... include/FileManager.obj
+	@echo ... include/FileManager.i
+	@echo ... include/FileManager.s
 	@echo ... include/Keyboard.obj
 	@echo ... include/Keyboard.i
 	@echo ... include/Keyboard.s

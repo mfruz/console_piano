@@ -2,6 +2,7 @@
 #define PIANO_NOTE_HPP
 #include <iostream>
 #include <windows.h>
+#include <vector>
 
 enum noteLength {
     QUAVER = 250,
@@ -9,6 +10,7 @@ enum noteLength {
     MINIM = 1000,
     SEMIBREVE = 2000
 };
+
 
 class Note {
 protected:
@@ -23,7 +25,8 @@ public:
 
     // getters
     double getFreq() const;
-    int getDuration() const;
+    unsigned int getDuration() const;
+
     // setters
     virtual void setFreq(double freq);
     void setDuration(unsigned int duration);

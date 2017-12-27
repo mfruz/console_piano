@@ -10,28 +10,39 @@ using std::string;
 class Song {
 private:
     string s_title;
-    double s_duration;
+    string s_duration;
     string s_composer;
     std::vector<Note> s_score;
 
 public:
     // getters
-    string s_getTitle() const;
-    double s_getDuration() const;
-    string s_getComposer() const;
-    std::vector<Note> getScore() const;
+    const string &s_getTitle() const;
+    const string &s_getDuration() const;
+    const string &s_getComposer() const;
+    /*string s_getTitle();
+    string s_getDuration();
+    string s_getComposer();*/
+    std::vector<Note>& getScore();
 
     // setters
-    void s_setTitle(string title);
-    void s_setDuration(double duration);
-    void s_setComposer(string composer);
+    void s_setTitle(const string &s_title);
+    void s_setDuration(const string &s_duration);
+    void s_setComposer(const string &s_composer);
+
+    /*void s_setTitle(string title);
+    void s_setDuration(string duration);
+    void s_setComposer(string composer);*/
     void s_addNote(Note note);
 
 
-    void displayTitle() const;
-    void displayDuration() const;
-    void displayComposer() const;
-    void displaySongInfo() const;
+    void displayTitle();
+    void displayDuration();
+    void displayComposer();
+    void displaySongInfo();
+
+
+
+
 };
 
 

@@ -82,6 +82,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/FileManager.cpp">
+			<Option target="piano"/>
+		</Unit>
+		<Unit filename="C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/FileManager.hpp">
+			<Option target="piano"/>
+		</Unit>
 		<Unit filename="C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Keyboard.cpp">
 			<Option target="piano"/>
 		</Unit>

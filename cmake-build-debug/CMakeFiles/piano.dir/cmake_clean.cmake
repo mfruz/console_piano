@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/piano.dir/include/Keyboard.cpp.obj"
   "CMakeFiles/piano.dir/include/Song.cpp.obj"
   "CMakeFiles/piano.dir/include/Silence.cpp.obj"
+  "CMakeFiles/piano.dir/include/FileManager.cpp.obj"
   "piano.pdb"
   "piano.exe"
   "piano.exe.manifest"

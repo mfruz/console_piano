@@ -25,14 +25,16 @@ public:
 
     // calls
     void callKeyboardPlay();
-    void composeAndPlay(Song s);
+    void composeAndPlay(Song &s);
 
     Song initSong();
-    string askTitle();
-    string askComposer();
+    string addTitle();
+    string addComposer();
     void askSaveSong(Song s);
     void saveSong(Song s);
-    void addSongInfo(Song s);
+    void addSongInfo(Song &s);
+
+    string askFileName();
 
     // display functions
     void home_message();
@@ -46,11 +48,12 @@ public:
 
     void composeMessage();
 
+    void listenMessage();
+
     // test functions
     void keyboardInit();
     string keyboardLayout();
     void checkMenuEntry();
-    bool checkRange(char key);
 };
 
 #endif //PIANO_HPP

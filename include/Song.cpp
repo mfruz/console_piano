@@ -1,47 +1,49 @@
 #include "Song.hpp"
 
 // getters
-string Song::s_getTitle() const {
-    return this->s_title;
+const string &Song::s_getTitle() const {
+    return s_title;
 }
-double Song::s_getDuration() const {
-    return this->s_duration;
+
+const string &Song::s_getDuration() const {
+    return s_duration;
 }
-string Song::s_getComposer() const {
-    return this->s_composer;
+
+const string &Song::s_getComposer() const {
+    return s_composer;
 }
-std::vector<Note> Song::getScore() const {
+
+std::vector<Note> & Song::getScore() {
     return this->s_score;
 }
 
 
 // setters
-void Song::s_setTitle(string title) {
-    this->s_title = title;
+void Song::s_setTitle(const string &s_title) {
+    Song::s_title = s_title;
 }
-void Song::s_setDuration(double duration) {
-    this->s_duration = duration;
+void Song::s_setDuration(const string &s_duration) {
+    Song::s_duration = s_duration;
 }
-void Song::s_setComposer(string composer) {
-    this->s_composer = composer;
+void Song::s_setComposer(const string &s_composer) {
+    Song::s_composer = s_composer;
 }
+
 void Song::s_addNote(Note note) {
     this->getScore().push_back(note);
 }
 
-
-
 // DISPLAY FUNCTIONS
-void Song::displayTitle() const {
+void Song::displayTitle() {
     std::cout << this->s_getTitle();
 }
-void Song::displayDuration() const {
+void Song::displayDuration() {
     std::cout << this->s_getDuration();
 }
-void Song::displayComposer() const {
+void Song::displayComposer() {
     std::cout << this->s_getComposer();
 }
-void Song::displaySongInfo() const {
+void Song::displaySongInfo() {
     displayTitle();
     std::cout << ", by ";
     displayComposer();

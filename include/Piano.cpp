@@ -1,4 +1,5 @@
 #include "Piano.hpp"
+#include "FileManager.hpp"
 #include <algorithm>
 #include <conio.h>
 #include <stdexcept>
@@ -52,7 +53,14 @@ void Piano::p_compose() {
 }
 
 void Piano::p_listen() {
+    this->listenMessage();
 
+    FileManager f;
+    f.setFileName(this->askFileName());
+    if(f.load()) {
+        f.read();
+    };
+//    f.read("lol.txt");
 }
 
 
@@ -76,7 +84,7 @@ void Piano::callKeyboardPlay() {
     while(note != '0');
 }
 
-void Piano::composeAndPlay(Song s) {
+void Piano::composeAndPlay(Song &s) {
     char key;
     do {
         key = getch();
@@ -93,6 +101,7 @@ void Piano::composeAndPlay(Song s) {
         }
     }
     while(key != '0');
+
 }
 
 
@@ -149,20 +158,17 @@ Song Piano::initSong() {
     return s;
 }
 
-string Piano::askTitle() {
+string Piano::addTitle() {
     string title;
     std::cout << "Choose a title for your song :" << std::endl;
     std::getline(std::cin, title);
-    std::cout << "Title : " << title << std::endl;
-
     return title;
 }
 
-string Piano::askComposer() {
+string Piano::addComposer() {
     string composer;
     std::cout << "Who composed this song ?" << std::endl;
     std::getline(std::cin, composer);
-    std::cout << "Composer : " << composer << std::endl;
     return composer;
 }
 
@@ -182,21 +188,28 @@ void Piano::askSaveSong(Song s) {
 
 void Piano::saveSong(Song s) {
     this->addSongInfo(s);
+    FileManager f;
+    f.write(s);
 
-
-    // SAVE VECTOR IN A .TXT FILE
-
-
-    std::cout << "lol" ;
     return;
 }
 
-void Piano::addSongInfo(Song s) {
-    s.s_setTitle(this->askTitle());
-    s.s_setComposer(this->askComposer());
+void Piano::addSongInfo(Song &s) {
+    s.s_setTitle(this->addTitle());
+    s.s_setComposer(this->addComposer());
 }
 
 
+
+
+// FILE MANAGER FUNCTIONS ------------------------------------------------
+string Piano::askFileName() {
+    std::cout << "Enter a song title :" << std::endl;
+    string file;
+    std::getline(std::cin, file);
+    std::cout << "File name : " << file.append(".txt") << std::endl;
+    return file;
+}
 // DISPLAY FUNCTIONS -----------------------------------------------------
 void Piano::home_message() {
     std::cout << "==============================================================" << std::endl;
@@ -250,7 +263,10 @@ void Piano::quitSession() {
 
 void Piano::whatNow() {
     std::cout << std::endl;
-    std::cout << "." << std::endl << "." << std::endl << "." << std::endl << "." << std::endl << "." << std::endl;
+    std::cout << "                                .                             " << std::endl
+              << "                                .                             " << std::endl
+              << "                                .                             " << std::endl
+              << "                                                              " << std::endl;
     std::cout << "--------------------------------------------------------------" << std::endl;
     std::cout << "- - - - - - - - What do you want to do now ? - - - - - - - - -" << std::endl;
 }
@@ -261,13 +277,31 @@ void Piano::warnQwerty() {
 
 void Piano::composeMessage() {
     std::cout << std::endl << std::endl;
-    std::cout << " ____________________________________________________________ " << std::endl;
-    std::cout << "|                                                            |" << std::endl;
-    std::cout << "|                   MOZART MODE: ACTIVATED                   |" << std::endl;
-    std::cout << "|____________________________________________________________|" << std::endl;
+
+    std::cout << "||==========================================================|| " << std::endl;
+    std::cout << "||                                                          ||" << std::endl;
+    std::cout << "||                     COMPOSITION TOOL                     ||" << std::endl;
+    std::cout << "||==========================================================||" << std::endl;
     std::cout << "          |  | | | |  |  | | | | | |  |  | | | |  |" << std::endl;
     std::cout << "          |  |_| |_|  |  |_| |_| |_|  |  |_| |_|  |" << std::endl;
     std::cout << "          |___|___|___|___|___|___|___|___|___|___|" << std::endl << std::endl;
 
+}
+
+void Piano::listenMessage() {
+    std::cout << std::endl << std::endl;
+    std::cout << "- - - - - - - - --------------------------- - - - - - - - - -" << std::endl;
+    std::cout << "                      RECORD PLAYER                          " << std::endl;
+    std::cout << "                      ______________  " << std::endl;
+    std::cout << "                    /_=_________=_/ |" << std::endl;
+    std::cout << "                    |   .....  ||  ||" << std::endl;
+    std::cout << "                    |  ::::::: ||  ||" << std::endl;
+    std::cout << "                    |  ::::::: ||__||" << std::endl;
+    std::cout << "                    |___'_'''__|/__|/" << std::endl;
+    std::cout << "                   / ,-''''-.  _/ /|" << std::endl;
+    std::cout << "                  /_ `_--_-'_`_  / |" << std::endl;
+    std::cout << "                 | U          U | / " << std::endl;
+    std::cout << "                 |______________|/  " << std::endl << std::endl;
+    std::cout << "- - - - - - - - --------------------------- - - - - - - - - -" << std::endl;
 }
 
