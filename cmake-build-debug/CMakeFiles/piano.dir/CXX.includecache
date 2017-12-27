@@ -7,6 +7,8 @@
 #IncludeRegexTransform: 
 
 C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/FileManager.cpp
+conio.h
+-
 FileManager.hpp
 C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/FileManager.hpp
 
@@ -14,6 +16,8 @@ C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/FileManager.hpp
 iostream
 -
 fstream
+-
+sstream
 -
 cstring
 -
@@ -73,14 +77,6 @@ cstdio
 -
 iostream
 -
-
-C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Silence.cpp
-Silence.hpp
-C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Silence.hpp
-
-C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Silence.hpp
-Note.hpp
-C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Note.hpp
 
 C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Song.cpp
 Song.hpp

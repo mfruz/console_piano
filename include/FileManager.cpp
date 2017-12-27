@@ -1,3 +1,4 @@
+#include <conio.h>
 #include "FileManager.hpp"
 
 const std::vector<size_t> noteDuration = {
@@ -50,22 +51,77 @@ unsigned int FileManager::convertDurationFormat(unsigned int ms) {
     }
 }
 
+unsigned int FileManager::convertFormatDuration(unsigned int time) {
+    switch(time) {
+        case 4:
+            return QUAVER;
+        case 3:
+            return CROTCHET;
+        case 2:
+            return MINIM;
+        case 1:
+            return SEMIBREVE;
+    }
+}
+
 
 
 bool FileManager::load() {
-    this->getFile().open(this->getPath()+this->getFileName(), std::fstream::in | std::fstream::out | std::fstream::app);
+    this->getFile().open(this->getPath()+this->getFileName()+this->getFormat(),
+                         std::ios::in);
     return this->getFile().is_open();
 }
 
 void FileManager::read() {
+//    this->getFile().open(this->getPath()+this->getFileName()+this->getFormat(),
+//                         std::ios::in);
+    Keyboard k;
+    k.k_initNotes();
+    Song s;
+    string line;
+    string note;
+    unsigned int duration;
+    this->getFile().seekg(0);
+    std::cout << " < --------------------- NOW PLAYING ---------------------- > " << std::endl;
 
+    while(!this->getFile().eof()) {
+        std::getline(this->getFile(), line);
+        std::istringstream iss;
+        iss.str(line);
+        iss >> note >> duration;
+
+        for (auto &it : k.k_getNoteNames()) {
+
+            //std::cout << "note : " << note << " / duration : " << duration << std::endl;
+            //std::cout << it.second << std::endl;
+             if(note == it.second) {
+                 double ms = this->convertFormatDuration(duration);
+                 Note n = Note(it.first, ms);
+                 //std::cout << "[" << k.k_getNoteNames().at(n.getFreq()) << "] ";
+
+                 n.play();
+                 //s.getScore().push_back(n);
+                 break;
+             }
+            else if (note == "0") {
+                 double ms = this->convertDurationFormat(duration);
+                 Note n = Note(0, ms);
+
+                 n.play();
+
+                 //s.getScore().push_back(silence);
+                 break;
+             }
+            /*else {
+                 this->wrongMusicFormat();
+                 return;
+             }*/
+        }
+    }
 }
 
 
 void FileManager::write(Song s) {
-    /*string fileName;
-    std::cout << "FILE NAME : " << std::endl;
-    std::getline(std::cin, fileName);*/
     std::ofstream outfile(this->getPath()+s.s_getTitle()+this->getFormat());
 
     Keyboard k;
@@ -87,4 +143,8 @@ void FileManager::close() {
 
 void FileManager::displayLoadError() {
     std::cout << "Couldn't load song, try again" << std::endl;
+}
+
+void FileManager::wrongMusicFormat() {
+    std::cout << "This file format can't be read" << std::endl;
 }

@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <fstream>
+#include <sstream>
 #include <cstring>
 #include "Song.hpp"
 #include "Keyboard.hpp"
@@ -38,9 +39,12 @@ public:
     void close();
 
     unsigned int convertDurationFormat(unsigned int ms);
+    unsigned int convertFormatDuration(unsigned int time);
 
-    // display functions
+
+        // display functions
     void displayLoadError();
+    void wrongMusicFormat();
 
 };
 

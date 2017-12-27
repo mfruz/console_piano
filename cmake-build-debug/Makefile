@@ -230,33 +230,6 @@ include/Piano.cpp.s:
 	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/include/Piano.cpp.s
 .PHONY : include/Piano.cpp.s
 
-include/Silence.obj: include/Silence.cpp.obj
-
-.PHONY : include/Silence.obj
-
-# target to build an object file
-include/Silence.cpp.obj:
-	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/include/Silence.cpp.obj
-.PHONY : include/Silence.cpp.obj
-
-include/Silence.i: include/Silence.cpp.i
-
-.PHONY : include/Silence.i
-
-# target to preprocess a source file
-include/Silence.cpp.i:
-	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/include/Silence.cpp.i
-.PHONY : include/Silence.cpp.i
-
-include/Silence.s: include/Silence.cpp.s
-
-.PHONY : include/Silence.s
-
-# target to generate assembly for a file
-include/Silence.cpp.s:
-	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/include/Silence.cpp.s
-.PHONY : include/Silence.cpp.s
-
 include/Song.obj: include/Song.cpp.obj
 
 .PHONY : include/Song.obj
@@ -332,9 +305,6 @@ help:
 	@echo ... include/Piano.obj
 	@echo ... include/Piano.i
 	@echo ... include/Piano.s
-	@echo ... include/Silence.obj
-	@echo ... include/Silence.i
-	@echo ... include/Silence.s
 	@echo ... include/Song.obj
 	@echo ... include/Song.i
 	@echo ... include/Song.s

@@ -54,12 +54,14 @@ void Piano::p_compose() {
 
 void Piano::p_listen() {
     this->listenMessage();
-
     FileManager f;
     f.setFileName(this->askFileName());
     if(f.load()) {
         f.read();
-    };
+    }
+    else f.displayLoadError();
+
+    this->quitSession();
 //    f.read("lol.txt");
 }
 
@@ -125,7 +127,6 @@ string Piano::keyboardLayout() {
 
 void Piano::checkMenuEntry() {
     char choice;
-    // with an iterator
     do {
         choice = getch();
         if(std::find(homeLabel.begin(), homeLabel.end(), choice) == homeLabel.end()) {
@@ -204,10 +205,24 @@ void Piano::addSongInfo(Song &s) {
 
 // FILE MANAGER FUNCTIONS ------------------------------------------------
 string Piano::askFileName() {
-    std::cout << "Enter a song title :" << std::endl;
+    std::cout << "Enter a song title :          /type [0] to quit" << std::endl;
     string file;
     std::getline(std::cin, file);
-    std::cout << "File name : " << file.append(".txt") << std::endl;
+    if(file == "0") {
+        this->quitSession();
+    }
+
+    return file;
+
+
+    /*do {
+        std::getline(std::cin, file);
+        if(file == "0") {
+            this->quitSession();
+        }
+    }
+    while(file == "0");*/
+
     return file;
 }
 // DISPLAY FUNCTIONS -----------------------------------------------------

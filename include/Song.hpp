@@ -10,14 +10,12 @@ using std::string;
 class Song {
 private:
     string s_title;
-    string s_duration;
     string s_composer;
     std::vector<Note> s_score;
 
 public:
     // getters
     const string &s_getTitle() const;
-    const string &s_getDuration() const;
     const string &s_getComposer() const;
     /*string s_getTitle();
     string s_getDuration();
@@ -26,7 +24,6 @@ public:
 
     // setters
     void s_setTitle(const string &s_title);
-    void s_setDuration(const string &s_duration);
     void s_setComposer(const string &s_composer);
 
     /*void s_setTitle(string title);
