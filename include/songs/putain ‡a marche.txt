@@ -1,6 +1,0 @@
-Title : zdfzrf
-Composer : zfgerg
-D 4
-E 4
-C# 4
-E 4

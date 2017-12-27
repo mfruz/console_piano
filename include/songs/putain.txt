@@ -1,4 +1,0 @@
-Title : putain
-Composer : mflouze
-D 4
-E 4

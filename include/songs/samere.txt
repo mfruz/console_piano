@@ -1,5 +1,0 @@
-Title : samere
-Composer : mflouze
-D 4
-E 4
-C 4

@@ -1,5 +1,0 @@
-Title : ptaun
-Composer : love
-E 4
-C# 4
-E 4
