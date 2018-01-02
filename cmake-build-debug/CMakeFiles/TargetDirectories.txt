@@ -1,3 +1,0 @@
-C:/Users/Pc/Dropbox/IMAC2/C++/piano/cmake-build-debug/CMakeFiles/piano.dir
-C:/Users/Pc/Dropbox/IMAC2/C++/piano/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Pc/Dropbox/IMAC2/C++/piano/cmake-build-debug/CMakeFiles/rebuild_cache.dir
