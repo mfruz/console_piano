@@ -20,19 +20,25 @@ protected:
 public:
     //constructor
     Note();
-    Note(double m_frequency, int m_duration) : m_frequency(m_frequency), m_duration(m_duration) {
-    }
+    Note(double m_frequency, unsigned int m_duration);
 
     // getters
     double getFreq() const;
+
     unsigned int getDuration() const;
 
     // setters
     virtual void setFreq(double freq);
+
     void setDuration(unsigned int duration);
-    void play() const;
+
+    virtual void play();
+
+    // operator overloading
+    Note &operator++(); // incrementing or decrementing a note means adding or subtracting a semitone
+    Note &operator--();
+
+
 };
-
-
 
 #endif //PIANO_NOTE_HPP
