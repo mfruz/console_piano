@@ -6,12 +6,6 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/FileManager.cpp
-conio.h
--
-FileManager.hpp
-C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/FileManager.hpp
-
 C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/FileManager.hpp
 iostream
 -
@@ -28,10 +22,6 @@ C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Keyboard.hpp
 Note.hpp
 C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Note.hpp
 
-C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Keyboard.cpp
-Keyboard.hpp
-C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Keyboard.hpp
-
 C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Keyboard.hpp
 map
 -
@@ -42,28 +32,12 @@ cstring
 Note.hpp
 C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Note.hpp
 
-C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Note.cpp
-Note.hpp
-C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Note.hpp
-
 C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Note.hpp
 iostream
 -
 windows.h
 -
 vector
--
-
-C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Piano.cpp
-Piano.hpp
-C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Piano.hpp
-FileManager.hpp
-C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/FileManager.hpp
-algorithm
--
-conio.h
--
-stdexcept
 -
 
 C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Piano.hpp
@@ -78,9 +52,9 @@ cstdio
 iostream
 -
 
-C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Song.cpp
-Song.hpp
-C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Song.hpp
+C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Rest.hpp
+Note.hpp
+C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Note.hpp
 
 C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Song.hpp
 vector
@@ -95,4 +69,40 @@ include/Piano.hpp
 C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Piano.hpp
 fstream
 -
+
+C:/Users/Pc/Dropbox/IMAC2/C++/piano/src/FileManager.cpp
+conio.h
+-
+../include/FileManager.hpp
+C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/FileManager.hpp
+../include/Rest.hpp
+C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Rest.hpp
+
+C:/Users/Pc/Dropbox/IMAC2/C++/piano/src/Keyboard.cpp
+../include/Keyboard.hpp
+C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Keyboard.hpp
+
+C:/Users/Pc/Dropbox/IMAC2/C++/piano/src/Note.cpp
+../include/Note.hpp
+C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Note.hpp
+
+C:/Users/Pc/Dropbox/IMAC2/C++/piano/src/Piano.cpp
+../include/Piano.hpp
+C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Piano.hpp
+../include/FileManager.hpp
+C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/FileManager.hpp
+algorithm
+-
+conio.h
+-
+stdexcept
+-
+
+C:/Users/Pc/Dropbox/IMAC2/C++/piano/src/Rest.cpp
+../include/Rest.hpp
+C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Rest.hpp
+
+C:/Users/Pc/Dropbox/IMAC2/C++/piano/src/Song.cpp
+../include/Song.hpp
+C:/Users/Pc/Dropbox/IMAC2/C++/piano/include/Song.hpp
 

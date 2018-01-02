@@ -122,141 +122,6 @@ piano/fast:
 	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/build
 .PHONY : piano/fast
 
-include/FileManager.obj: include/FileManager.cpp.obj
-
-.PHONY : include/FileManager.obj
-
-# target to build an object file
-include/FileManager.cpp.obj:
-	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/include/FileManager.cpp.obj
-.PHONY : include/FileManager.cpp.obj
-
-include/FileManager.i: include/FileManager.cpp.i
-
-.PHONY : include/FileManager.i
-
-# target to preprocess a source file
-include/FileManager.cpp.i:
-	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/include/FileManager.cpp.i
-.PHONY : include/FileManager.cpp.i
-
-include/FileManager.s: include/FileManager.cpp.s
-
-.PHONY : include/FileManager.s
-
-# target to generate assembly for a file
-include/FileManager.cpp.s:
-	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/include/FileManager.cpp.s
-.PHONY : include/FileManager.cpp.s
-
-include/Keyboard.obj: include/Keyboard.cpp.obj
-
-.PHONY : include/Keyboard.obj
-
-# target to build an object file
-include/Keyboard.cpp.obj:
-	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/include/Keyboard.cpp.obj
-.PHONY : include/Keyboard.cpp.obj
-
-include/Keyboard.i: include/Keyboard.cpp.i
-
-.PHONY : include/Keyboard.i
-
-# target to preprocess a source file
-include/Keyboard.cpp.i:
-	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/include/Keyboard.cpp.i
-.PHONY : include/Keyboard.cpp.i
-
-include/Keyboard.s: include/Keyboard.cpp.s
-
-.PHONY : include/Keyboard.s
-
-# target to generate assembly for a file
-include/Keyboard.cpp.s:
-	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/include/Keyboard.cpp.s
-.PHONY : include/Keyboard.cpp.s
-
-include/Note.obj: include/Note.cpp.obj
-
-.PHONY : include/Note.obj
-
-# target to build an object file
-include/Note.cpp.obj:
-	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/include/Note.cpp.obj
-.PHONY : include/Note.cpp.obj
-
-include/Note.i: include/Note.cpp.i
-
-.PHONY : include/Note.i
-
-# target to preprocess a source file
-include/Note.cpp.i:
-	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/include/Note.cpp.i
-.PHONY : include/Note.cpp.i
-
-include/Note.s: include/Note.cpp.s
-
-.PHONY : include/Note.s
-
-# target to generate assembly for a file
-include/Note.cpp.s:
-	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/include/Note.cpp.s
-.PHONY : include/Note.cpp.s
-
-include/Piano.obj: include/Piano.cpp.obj
-
-.PHONY : include/Piano.obj
-
-# target to build an object file
-include/Piano.cpp.obj:
-	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/include/Piano.cpp.obj
-.PHONY : include/Piano.cpp.obj
-
-include/Piano.i: include/Piano.cpp.i
-
-.PHONY : include/Piano.i
-
-# target to preprocess a source file
-include/Piano.cpp.i:
-	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/include/Piano.cpp.i
-.PHONY : include/Piano.cpp.i
-
-include/Piano.s: include/Piano.cpp.s
-
-.PHONY : include/Piano.s
-
-# target to generate assembly for a file
-include/Piano.cpp.s:
-	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/include/Piano.cpp.s
-.PHONY : include/Piano.cpp.s
-
-include/Song.obj: include/Song.cpp.obj
-
-.PHONY : include/Song.obj
-
-# target to build an object file
-include/Song.cpp.obj:
-	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/include/Song.cpp.obj
-.PHONY : include/Song.cpp.obj
-
-include/Song.i: include/Song.cpp.i
-
-.PHONY : include/Song.i
-
-# target to preprocess a source file
-include/Song.cpp.i:
-	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/include/Song.cpp.i
-.PHONY : include/Song.cpp.i
-
-include/Song.s: include/Song.cpp.s
-
-.PHONY : include/Song.s
-
-# target to generate assembly for a file
-include/Song.cpp.s:
-	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/include/Song.cpp.s
-.PHONY : include/Song.cpp.s
-
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -284,6 +149,168 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/FileManager.obj: src/FileManager.cpp.obj
+
+.PHONY : src/FileManager.obj
+
+# target to build an object file
+src/FileManager.cpp.obj:
+	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/src/FileManager.cpp.obj
+.PHONY : src/FileManager.cpp.obj
+
+src/FileManager.i: src/FileManager.cpp.i
+
+.PHONY : src/FileManager.i
+
+# target to preprocess a source file
+src/FileManager.cpp.i:
+	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/src/FileManager.cpp.i
+.PHONY : src/FileManager.cpp.i
+
+src/FileManager.s: src/FileManager.cpp.s
+
+.PHONY : src/FileManager.s
+
+# target to generate assembly for a file
+src/FileManager.cpp.s:
+	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/src/FileManager.cpp.s
+.PHONY : src/FileManager.cpp.s
+
+src/Keyboard.obj: src/Keyboard.cpp.obj
+
+.PHONY : src/Keyboard.obj
+
+# target to build an object file
+src/Keyboard.cpp.obj:
+	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/src/Keyboard.cpp.obj
+.PHONY : src/Keyboard.cpp.obj
+
+src/Keyboard.i: src/Keyboard.cpp.i
+
+.PHONY : src/Keyboard.i
+
+# target to preprocess a source file
+src/Keyboard.cpp.i:
+	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/src/Keyboard.cpp.i
+.PHONY : src/Keyboard.cpp.i
+
+src/Keyboard.s: src/Keyboard.cpp.s
+
+.PHONY : src/Keyboard.s
+
+# target to generate assembly for a file
+src/Keyboard.cpp.s:
+	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/src/Keyboard.cpp.s
+.PHONY : src/Keyboard.cpp.s
+
+src/Note.obj: src/Note.cpp.obj
+
+.PHONY : src/Note.obj
+
+# target to build an object file
+src/Note.cpp.obj:
+	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/src/Note.cpp.obj
+.PHONY : src/Note.cpp.obj
+
+src/Note.i: src/Note.cpp.i
+
+.PHONY : src/Note.i
+
+# target to preprocess a source file
+src/Note.cpp.i:
+	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/src/Note.cpp.i
+.PHONY : src/Note.cpp.i
+
+src/Note.s: src/Note.cpp.s
+
+.PHONY : src/Note.s
+
+# target to generate assembly for a file
+src/Note.cpp.s:
+	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/src/Note.cpp.s
+.PHONY : src/Note.cpp.s
+
+src/Piano.obj: src/Piano.cpp.obj
+
+.PHONY : src/Piano.obj
+
+# target to build an object file
+src/Piano.cpp.obj:
+	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/src/Piano.cpp.obj
+.PHONY : src/Piano.cpp.obj
+
+src/Piano.i: src/Piano.cpp.i
+
+.PHONY : src/Piano.i
+
+# target to preprocess a source file
+src/Piano.cpp.i:
+	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/src/Piano.cpp.i
+.PHONY : src/Piano.cpp.i
+
+src/Piano.s: src/Piano.cpp.s
+
+.PHONY : src/Piano.s
+
+# target to generate assembly for a file
+src/Piano.cpp.s:
+	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/src/Piano.cpp.s
+.PHONY : src/Piano.cpp.s
+
+src/Rest.obj: src/Rest.cpp.obj
+
+.PHONY : src/Rest.obj
+
+# target to build an object file
+src/Rest.cpp.obj:
+	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/src/Rest.cpp.obj
+.PHONY : src/Rest.cpp.obj
+
+src/Rest.i: src/Rest.cpp.i
+
+.PHONY : src/Rest.i
+
+# target to preprocess a source file
+src/Rest.cpp.i:
+	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/src/Rest.cpp.i
+.PHONY : src/Rest.cpp.i
+
+src/Rest.s: src/Rest.cpp.s
+
+.PHONY : src/Rest.s
+
+# target to generate assembly for a file
+src/Rest.cpp.s:
+	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/src/Rest.cpp.s
+.PHONY : src/Rest.cpp.s
+
+src/Song.obj: src/Song.cpp.obj
+
+.PHONY : src/Song.obj
+
+# target to build an object file
+src/Song.cpp.obj:
+	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/src/Song.cpp.obj
+.PHONY : src/Song.cpp.obj
+
+src/Song.i: src/Song.cpp.i
+
+.PHONY : src/Song.i
+
+# target to preprocess a source file
+src/Song.cpp.i:
+	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/src/Song.cpp.i
+.PHONY : src/Song.cpp.i
+
+src/Song.s: src/Song.cpp.s
+
+.PHONY : src/Song.s
+
+# target to generate assembly for a file
+src/Song.cpp.s:
+	$(MAKE) -f CMakeFiles\piano.dir\build.make CMakeFiles/piano.dir/src/Song.cpp.s
+.PHONY : src/Song.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -293,24 +320,27 @@ help:
 	@echo ... piano
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... include/FileManager.obj
-	@echo ... include/FileManager.i
-	@echo ... include/FileManager.s
-	@echo ... include/Keyboard.obj
-	@echo ... include/Keyboard.i
-	@echo ... include/Keyboard.s
-	@echo ... include/Note.obj
-	@echo ... include/Note.i
-	@echo ... include/Note.s
-	@echo ... include/Piano.obj
-	@echo ... include/Piano.i
-	@echo ... include/Piano.s
-	@echo ... include/Song.obj
-	@echo ... include/Song.i
-	@echo ... include/Song.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... src/FileManager.obj
+	@echo ... src/FileManager.i
+	@echo ... src/FileManager.s
+	@echo ... src/Keyboard.obj
+	@echo ... src/Keyboard.i
+	@echo ... src/Keyboard.s
+	@echo ... src/Note.obj
+	@echo ... src/Note.i
+	@echo ... src/Note.s
+	@echo ... src/Piano.obj
+	@echo ... src/Piano.i
+	@echo ... src/Piano.s
+	@echo ... src/Rest.obj
+	@echo ... src/Rest.i
+	@echo ... src/Rest.s
+	@echo ... src/Song.obj
+	@echo ... src/Song.i
+	@echo ... src/Song.s
 .PHONY : help
 
 

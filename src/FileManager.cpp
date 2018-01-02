@@ -1,5 +1,6 @@
 #include <conio.h>
-#include "FileManager.hpp"
+#include "../include/FileManager.hpp"
+#include "../include/Rest.hpp"
 
 const std::vector<size_t> noteDuration = {
         4,
@@ -92,30 +93,24 @@ void FileManager::read() {
 
         for (auto &it : k.k_getNoteNames()) {
 
-            //std::cout << "note : " << note << " / duration : " << duration << std::endl;
-            //std::cout << it.second << std::endl;
              if(note == it.second) {
                  double ms = this->convertFormatDuration(duration);
                  Note n = Note(it.first, ms);
-                 //std::cout << "[" << k.k_getNoteNames().at(n.getFreq()) << "] ";
 
                  n.play();
-                 //s.getScore().push_back(n);
                  break;
              }
             else if (note == "0") {
                  double ms = this->convertDurationFormat(duration);
-                 Note n = Note(0, ms);
+                 Rest r(duration) ;
 
-                 n.play();
-
-                 //s.getScore().push_back(silence);
+                 r.play();
                  break;
              }
-            /*else {
+            else {
                  this->wrongMusicFormat();
                  return;
-             }*/
+             }
         }
     }
 }

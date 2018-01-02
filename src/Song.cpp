@@ -1,4 +1,4 @@
-#include "Song.hpp"
+#include "../include/Song.hpp"
 
 // getters
 const string &Song::s_getTitle() const {

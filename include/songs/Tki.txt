@@ -1,0 +1,9 @@
+Title : Tki
+Composer : Moi
+C 4
+C 4
+E 4
+E 4
+D 4
+D 4
+C 4
