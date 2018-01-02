@@ -1,5 +1,5 @@
-#include "Piano.hpp"
-#include "FileManager.hpp"
+#include "../include/Piano.hpp"
+#include "../include/FileManager.hpp"
 #include <algorithm>
 #include <conio.h>
 #include <stdexcept>
@@ -40,6 +40,7 @@ void Piano::homeMenu() {
 
 void Piano::p_play(){
     this->playMessage();
+    this->transposeMessage();
     this->callKeyboardPlay();
     this->quitSession();
 }
@@ -64,7 +65,6 @@ void Piano::p_listen() {
     f.close();
 
     this->quitSession();
-//    f.read("lol.txt");
 }
 
 
@@ -74,10 +74,33 @@ void Piano::callKeyboardPlay() {
 
     do {
         note = getch();
-        if(note == '0'){
-            std::cout << std::endl << std::endl;
-            return;
+
+        switch(note) {
+            case '0':
+                std::cout << std::endl << std::endl;
+                return;
+            case '+':
+                k.k_transpose(1);
+                std::cout << std::endl << "                                                   SEMITONE+1" << std::endl;
+                break;
+            case '-':
+                k.k_transpose(-1);
+                std::cout << std::endl << "                                                   SEMITONE-1" << std::endl;
+                break;
+            case '*':
+                k.k_transpose(12);
+                std::cout << std::endl << "                                                     OCTAVE+1" << std::endl;
+                break;
+            case '/':
+                k.k_transpose(-12);
+                std::cout << std::endl << "                                                     OCTAVE-1" << std::endl;
+                break;
+            case ' ':
+                k.k_initRange();
+                std::cout << std::endl << "                                               KEYBOARD RESET" << std::endl;
+
         }
+
         try {
             k.k_play(note);
         }
@@ -92,10 +115,12 @@ void Piano::composeAndPlay(Song &s) {
     char key;
     do {
         key = getch();
-        if(key == '0'){
+        if(key == '0')
+        {
             std::cout << std::endl << std::endl;
             return;
         }
+
         try {
             k.k_play(key);
             s.s_addNote(k.k_getRange().at(key));
@@ -322,3 +347,9 @@ void Piano::listenMessage() {
     std::cout << "- - - - - - - - --------------------------- - - - - - - - - -" << std::endl;
 }
 
+void Piano::transposeMessage() {
+    std::cout << std::endl;
+    std::cout << "                    To transpose a semitone, press [+] or [-]" << std::endl;
+    std::cout << "                           To change octave, press [*] or [/]" << std::endl;
+    std::cout << "                              To reset, press the [space] bar" << std::endl << std::endl;
+}

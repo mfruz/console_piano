@@ -45,9 +45,8 @@ public:
     void wrongMenuEntry();
     void warnQwerty();
     void whatNow();
-
+    void transposeMessage();
     void composeMessage();
-
     void listenMessage();
 
     // test functions
