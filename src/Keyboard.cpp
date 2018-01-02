@@ -1,4 +1,4 @@
-#include "Keyboard.hpp"
+#include "../include/Keyboard.hpp"
 
 // vector of all useful frequencies
 void Keyboard::k_initNotes() {
@@ -87,7 +87,12 @@ void Keyboard::k_browseNotes() const {
 
 
 void Keyboard::k_play(char note) {
+    try {
         this->k_displayNote(note);
+    }
+    catch(std::out_of_range&) {
+        // ignore
+    }
         this->k_getRange().at(note).play();
 }
 
@@ -99,23 +104,33 @@ void Keyboard::k_displayNote(char key) {
 }
 
 void Keyboard::k_transpose(int semitone) {
-    if(semitone == 12) {
-        //parcourir tableau et faire valeur[i]*2
+    if(semitone > 0) {
+        if(semitone == 12) {
+            // browse notes table and multiply frequency by 2
+            for(auto &r : k_range) {
+                double freq = r.second.getFreq() * 2;
+                r.second.setFreq(freq);
+            }
+        }
+        else {
+            for (auto &r : k_range) {
+                ++(r.second);
+            }
+        }
+
     }
-    else if(semitone < 0) {
-        // parcourir tableau et faire une boucle for sur chaque valeur
-        /*for (int i = 0; i < abs(semitone); i++)
-        {
-            setFreq(this->m_frequency /= 1.059475);
-        }*/
-    }
-    else
-    {
-        // parcourir tableau et faire boucle for sur chaque valeur
-        /*for(int i = 0; i < semitone; i++)
-        {
-            setFreq(this->m_frequency *= 1.059475); // 1.059 is * coefficient btw 2 semitones
-        }*/
+    else {
+        if(abs(semitone) == 12) {
+            for(auto &r : k_range) {
+                double freq = r.second.getFreq() / 2;
+                r.second.setFreq(freq);
+            }
+        }
+        else {
+            for (auto &r : k_range) {
+                --(r.second);
+            }
+        }
     }
 }
 
